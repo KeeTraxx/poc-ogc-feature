@@ -14,6 +14,8 @@ services:
         condition: service_healthy
       opensearch-loader:
         condition: service_completed_successfully
+      geojson-loader:
+        condition: service_completed_successfully
 
   postgis:
     image: postgis/postgis:17-3.5
@@ -56,6 +58,25 @@ services:
     volumes:
       - ./load-opensearch.sh:/load.sh
     entrypoint: ["sh", "/load.sh"]
+
+  geojson-loader:
+    image: python:3.13-slim
+    depends_on:
+      postgis:
+        condition: service_healthy
+      opensearch:
+        condition: service_healthy
+    volumes:
+      - ./load-geojson.py:/app/load-geojson.py
+      - ./data:/app/data
+    working_dir: /app
+    environment:
+      PG_HOST: postgis
+      OS_URL: http://opensearch:9200
+    entrypoint:
+      - sh
+      - -c
+      - "pip install --quiet psycopg2-binary requests && python3 load-geojson.py"
 
 volumes:
   pgdata:

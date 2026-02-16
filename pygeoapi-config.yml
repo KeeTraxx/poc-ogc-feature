@@ -155,3 +155,325 @@ resources:
         open_search: true
         id_field: id
         title_field: name
+
+  # ── GeoJSON data: PostGIS collections ──
+
+  cantons-postgis:
+    type: collection
+    title: Swiss Cantons (PostGIS)
+    description: Boundaries of the 26 Swiss cantons
+    keywords: [switzerland, cantons, administrative, postgis]
+    links:
+      - type: text/html
+        rel: canonical
+        title: swisstopo
+        href: https://www.swisstopo.admin.ch
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: PostgreSQL
+        data:
+          host: postgis
+          port: 5432
+          dbname: geodata
+          user: geo
+          password: geo
+          search_path: [public]
+        id_field: gid
+        title_field: KTKZ
+        table: geojson_cantons
+        geom_field: geom
+
+  country-postgis:
+    type: collection
+    title: Swiss Country Boundary (PostGIS)
+    description: Country boundary of Switzerland
+    keywords: [switzerland, country, boundary, postgis]
+    links:
+      - type: text/html
+        rel: canonical
+        title: swisstopo
+        href: https://www.swisstopo.admin.ch
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: PostgreSQL
+        data:
+          host: postgis
+          port: 5432
+          dbname: geodata
+          user: geo
+          password: geo
+          search_path: [public]
+        id_field: gid
+        title_field: name
+        table: geojson_country
+        geom_field: geom
+
+  districts-postgis:
+    type: collection
+    title: Swiss Districts (PostGIS)
+    description: Boundaries of the 144 Swiss districts
+    keywords: [switzerland, districts, administrative, postgis]
+    links:
+      - type: text/html
+        rel: canonical
+        title: swisstopo
+        href: https://www.swisstopo.admin.ch
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: PostgreSQL
+        data:
+          host: postgis
+          port: 5432
+          dbname: geodata
+          user: geo
+          password: geo
+          search_path: [public]
+        id_field: gid
+        title_field: BEZNAME
+        table: geojson_districts
+        geom_field: geom
+
+  lakes-postgis:
+    type: collection
+    title: Swiss Lakes (PostGIS)
+    description: Major Swiss lakes
+    keywords: [switzerland, lakes, hydrography, postgis]
+    links:
+      - type: text/html
+        rel: canonical
+        title: swisstopo
+        href: https://www.swisstopo.admin.ch
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: PostgreSQL
+        data:
+          host: postgis
+          port: 5432
+          dbname: geodata
+          user: geo
+          password: geo
+          search_path: [public]
+        id_field: gid
+        title_field: name
+        table: geojson_lakes
+        geom_field: geom
+
+  municipalities-postgis:
+    type: collection
+    title: Swiss Municipalities (PostGIS)
+    description: Boundaries of all 2113 Swiss municipalities
+    keywords: [switzerland, municipalities, administrative, postgis]
+    links:
+      - type: text/html
+        rel: canonical
+        title: swisstopo
+        href: https://www.swisstopo.admin.ch
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: PostgreSQL
+        data:
+          host: postgis
+          port: 5432
+          dbname: geodata
+          user: geo
+          password: geo
+          search_path: [public]
+        id_field: gid
+        title_field: GDENAME
+        table: geojson_municipalities
+        geom_field: geom
+
+  swiss-places-geojson-postgis:
+    type: collection
+    title: Swiss Places from GeoJSON (PostGIS)
+    description: Swiss cities, mountains, and lakes loaded from GeoJSON into PostGIS
+    keywords: [switzerland, places, postgis]
+    links:
+      - type: text/html
+        rel: canonical
+        title: Swiss geospatial data
+        href: https://www.swisstopo.admin.ch
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: PostgreSQL
+        data:
+          host: postgis
+          port: 5432
+          dbname: geodata
+          user: geo
+          password: geo
+          search_path: [public]
+        id_field: gid
+        title_field: name
+        table: geojson_swiss_places
+        geom_field: geom
+
+  # ── GeoJSON data: OpenSearch collections ──
+
+  cantons-opensearch:
+    type: collection
+    title: Swiss Cantons (OpenSearch)
+    description: Boundaries of the 26 Swiss cantons
+    keywords: [switzerland, cantons, administrative, opensearch]
+    links:
+      - type: text/html
+        rel: canonical
+        title: swisstopo
+        href: https://www.swisstopo.admin.ch
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: OpenSearch
+        data: http://opensearch:9200/geojson-cantons
+        open_search: true
+        id_field: id
+        title_field: properties.KTKZ
+
+  country-opensearch:
+    type: collection
+    title: Swiss Country Boundary (OpenSearch)
+    description: Country boundary of Switzerland
+    keywords: [switzerland, country, boundary, opensearch]
+    links:
+      - type: text/html
+        rel: canonical
+        title: swisstopo
+        href: https://www.swisstopo.admin.ch
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: OpenSearch
+        data: http://opensearch:9200/geojson-country
+        open_search: true
+        id_field: id
+        title_field: properties.name
+
+  districts-opensearch:
+    type: collection
+    title: Swiss Districts (OpenSearch)
+    description: Boundaries of the 144 Swiss districts
+    keywords: [switzerland, districts, administrative, opensearch]
+    links:
+      - type: text/html
+        rel: canonical
+        title: swisstopo
+        href: https://www.swisstopo.admin.ch
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: OpenSearch
+        data: http://opensearch:9200/geojson-districts
+        open_search: true
+        id_field: id
+        title_field: properties.BEZNAME
+
+  lakes-opensearch:
+    type: collection
+    title: Swiss Lakes (OpenSearch)
+    description: Major Swiss lakes
+    keywords: [switzerland, lakes, hydrography, opensearch]
+    links:
+      - type: text/html
+        rel: canonical
+        title: swisstopo
+        href: https://www.swisstopo.admin.ch
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: OpenSearch
+        data: http://opensearch:9200/geojson-lakes
+        open_search: true
+        id_field: id
+        title_field: properties.name
+
+  municipalities-opensearch:
+    type: collection
+    title: Swiss Municipalities (OpenSearch)
+    description: Boundaries of all 2113 Swiss municipalities
+    keywords: [switzerland, municipalities, administrative, opensearch]
+    links:
+      - type: text/html
+        rel: canonical
+        title: swisstopo
+        href: https://www.swisstopo.admin.ch
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: OpenSearch
+        data: http://opensearch:9200/geojson-municipalities
+        open_search: true
+        id_field: id
+        title_field: properties.GDENAME
+
+  swiss-places-geojson-opensearch:
+    type: collection
+    title: Swiss Places from GeoJSON (OpenSearch)
+    description: Swiss cities, mountains, and lakes loaded from GeoJSON into OpenSearch
+    keywords: [switzerland, places, opensearch]
+    links:
+      - type: text/html
+        rel: canonical
+        title: Swiss geospatial data
+        href: https://www.swisstopo.admin.ch
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: OpenSearch
+        data: http://opensearch:9200/geojson-swiss-places
+        open_search: true
+        id_field: id
+        title_field: properties.name
