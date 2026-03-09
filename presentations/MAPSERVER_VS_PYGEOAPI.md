@@ -2,6 +2,16 @@
 
 ---
 
+## Why are we comparing MapServer and PyGeoAPI?
+
+By the end of the year:
+
+**Serve ch.meteoschweiz.ogd-local-forecasting data via OGC API – Features.**
+
+https://data.geo.admin.ch/browser/index.html#/collections/ch.meteoschweiz.ogd-local-forecasting?.language=en
+
+---
+
 ## MapServer
 
 - License: MIT-style (MIT/X)

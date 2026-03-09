@@ -556,3 +556,1959 @@ resources:
         open_search: true
         id_field: id
         title_field: properties.GDENAME
+
+  # ── MeteoSwiss Forecast Collections ──
+  meteoswiss-tre200dx:
+    type: collection
+    title: "MeteoSwiss - Air temperature 2 m above ground; daily maximum (°C)"
+    description: "Air temperature 2 m above ground; daily maximum. Group: Temperature. Unit: °C."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - temperature
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: PostgreSQL
+        data:
+          host: ${POSTGRES_HOST:-postgis}
+          port: ${POSTGRES_PORT:-5432}
+          dbname: ${POSTGRES_DB:-geodata}
+          user: ${POSTGRES_USER:-geo}
+          password: ${POSTGRES_PASSWORD:-geo}
+          search_path:
+            - public
+        id_field: gid
+        title_field: name
+        table: geojson_meteoswiss_tre200dx
+        geom_field: geom
+  meteoswiss-tre200dn:
+    type: collection
+    title: "MeteoSwiss - Air temperature 2 m above ground; daily minimum (°C)"
+    description: "Air temperature 2 m above ground; daily minimum. Group: Temperature. Unit: °C."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - temperature
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: PostgreSQL
+        data:
+          host: ${POSTGRES_HOST:-postgis}
+          port: ${POSTGRES_PORT:-5432}
+          dbname: ${POSTGRES_DB:-geodata}
+          user: ${POSTGRES_USER:-geo}
+          password: ${POSTGRES_PASSWORD:-geo}
+          search_path:
+            - public
+        id_field: gid
+        title_field: name
+        table: geojson_meteoswiss_tre200dn
+        geom_field: geom
+  meteoswiss-rka150d0:
+    type: collection
+    title: "MeteoSwiss - Precipitation; daily total 0 UTC - 0 UTC (mm)"
+    description: "Precipitation; daily total 0 UTC - 0 UTC. Group: Precipitation. Unit: mm."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - precipitation
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: PostgreSQL
+        data:
+          host: ${POSTGRES_HOST:-postgis}
+          port: ${POSTGRES_PORT:-5432}
+          dbname: ${POSTGRES_DB:-geodata}
+          user: ${POSTGRES_USER:-geo}
+          password: ${POSTGRES_PASSWORD:-geo}
+          search_path:
+            - public
+        id_field: gid
+        title_field: name
+        table: geojson_meteoswiss_rka150d0
+        geom_field: geom
+  meteoswiss-tre200h0:
+    type: collection
+    title: "MeteoSwiss - Air temperature 2 m above ground; hourly mean (°C)"
+    description: "Air temperature 2 m above ground; hourly mean. Group: Temperature. Unit: °C."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - temperature
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: PostgreSQL
+        data:
+          host: ${POSTGRES_HOST:-postgis}
+          port: ${POSTGRES_PORT:-5432}
+          dbname: ${POSTGRES_DB:-geodata}
+          user: ${POSTGRES_USER:-geo}
+          password: ${POSTGRES_PASSWORD:-geo}
+          search_path:
+            - public
+        id_field: gid
+        title_field: name
+        table: geojson_meteoswiss_tre200h0
+        geom_field: geom
+  meteoswiss-rre150h0:
+    type: collection
+    title: "MeteoSwiss - Precipitation; hourly total (mm)"
+    description: "Precipitation; hourly total. Group: Precipitation. Unit: mm."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - precipitation
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: PostgreSQL
+        data:
+          host: ${POSTGRES_HOST:-postgis}
+          port: ${POSTGRES_PORT:-5432}
+          dbname: ${POSTGRES_DB:-geodata}
+          user: ${POSTGRES_USER:-geo}
+          password: ${POSTGRES_PASSWORD:-geo}
+          search_path:
+            - public
+        id_field: gid
+        title_field: name
+        table: geojson_meteoswiss_rre150h0
+        geom_field: geom
+  meteoswiss-gre000h0:
+    type: collection
+    title: "MeteoSwiss - Global radiation; hourly mean (W/m²)"
+    description: "Global radiation; hourly mean. Group: Radiation. Unit: W/m²."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - radiation
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: PostgreSQL
+        data:
+          host: ${POSTGRES_HOST:-postgis}
+          port: ${POSTGRES_PORT:-5432}
+          dbname: ${POSTGRES_DB:-geodata}
+          user: ${POSTGRES_USER:-geo}
+          password: ${POSTGRES_PASSWORD:-geo}
+          search_path:
+            - public
+        id_field: gid
+        title_field: name
+        table: geojson_meteoswiss_gre000h0
+        geom_field: geom
+  meteoswiss-sre000h0:
+    type: collection
+    title: "MeteoSwiss - Sunshine duration; hourly total (min)"
+    description: "Sunshine duration; hourly total. Group: Sunshine. Unit: min."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - sunshine
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: PostgreSQL
+        data:
+          host: ${POSTGRES_HOST:-postgis}
+          port: ${POSTGRES_PORT:-5432}
+          dbname: ${POSTGRES_DB:-geodata}
+          user: ${POSTGRES_USER:-geo}
+          password: ${POSTGRES_PASSWORD:-geo}
+          search_path:
+            - public
+        id_field: gid
+        title_field: name
+        table: geojson_meteoswiss_sre000h0
+        geom_field: geom
+  meteoswiss-dkl010h0:
+    type: collection
+    title: "MeteoSwiss - Wind direction; hourly mean (°)"
+    description: "Wind direction; hourly mean. Group: Wind. Unit: °."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - wind
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: PostgreSQL
+        data:
+          host: ${POSTGRES_HOST:-postgis}
+          port: ${POSTGRES_PORT:-5432}
+          dbname: ${POSTGRES_DB:-geodata}
+          user: ${POSTGRES_USER:-geo}
+          password: ${POSTGRES_PASSWORD:-geo}
+          search_path:
+            - public
+        id_field: gid
+        title_field: name
+        table: geojson_meteoswiss_dkl010h0
+        geom_field: geom
+  meteoswiss-fu3010h0:
+    type: collection
+    title: "MeteoSwiss - Wind speed scalar; hourly mean in km/h (km/h)"
+    description: "Wind speed scalar; hourly mean in km/h. Group: Wind. Unit: km/h."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - wind
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: PostgreSQL
+        data:
+          host: ${POSTGRES_HOST:-postgis}
+          port: ${POSTGRES_PORT:-5432}
+          dbname: ${POSTGRES_DB:-geodata}
+          user: ${POSTGRES_USER:-geo}
+          password: ${POSTGRES_PASSWORD:-geo}
+          search_path:
+            - public
+        id_field: gid
+        title_field: name
+        table: geojson_meteoswiss_fu3010h0
+        geom_field: geom
+  meteoswiss-fu3010h1:
+    type: collection
+    title: "MeteoSwiss - Gust peak (one second); hourly maximum in km/h (km/h)"
+    description: "Gust peak (one second); hourly maximum in km/h. Group: Wind. Unit: km/h."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - wind
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: PostgreSQL
+        data:
+          host: ${POSTGRES_HOST:-postgis}
+          port: ${POSTGRES_PORT:-5432}
+          dbname: ${POSTGRES_DB:-geodata}
+          user: ${POSTGRES_USER:-geo}
+          password: ${POSTGRES_PASSWORD:-geo}
+          search_path:
+            - public
+        id_field: gid
+        title_field: name
+        table: geojson_meteoswiss_fu3010h1
+        geom_field: geom
+  meteoswiss-zprfr0hs:
+    type: collection
+    title: "MeteoSwiss - Zero degree level; hourly value, forecast (m)"
+    description: "Zero degree level; hourly value, forecast. Group: Temperature. Unit: m."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - temperature
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: PostgreSQL
+        data:
+          host: ${POSTGRES_HOST:-postgis}
+          port: ${POSTGRES_PORT:-5432}
+          dbname: ${POSTGRES_DB:-geodata}
+          user: ${POSTGRES_USER:-geo}
+          password: ${POSTGRES_PASSWORD:-geo}
+          search_path:
+            - public
+        id_field: gid
+        title_field: name
+        table: geojson_meteoswiss_zprfr0hs
+        geom_field: geom
+  meteoswiss-rre003i0:
+    type: collection
+    title: "MeteoSwiss - Total precipitation during 3 hours (mm)"
+    description: "Total precipitation during 3 hours. Group: Precipitation. Unit: mm."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - precipitation
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: PostgreSQL
+        data:
+          host: ${POSTGRES_HOST:-postgis}
+          port: ${POSTGRES_PORT:-5432}
+          dbname: ${POSTGRES_DB:-geodata}
+          user: ${POSTGRES_USER:-geo}
+          password: ${POSTGRES_PASSWORD:-geo}
+          search_path:
+            - public
+        id_field: gid
+        title_field: name
+        table: geojson_meteoswiss_rre003i0
+        geom_field: geom
+  meteoswiss-ods000h0:
+    type: collection
+    title: "MeteoSwiss - Diffuse radiation; hourly mean (W/m²)"
+    description: "Diffuse radiation; hourly mean. Group: Radiation. Unit: W/m²."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - radiation
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: PostgreSQL
+        data:
+          host: ${POSTGRES_HOST:-postgis}
+          port: ${POSTGRES_PORT:-5432}
+          dbname: ${POSTGRES_DB:-geodata}
+          user: ${POSTGRES_USER:-geo}
+          password: ${POSTGRES_PASSWORD:-geo}
+          search_path:
+            - public
+        id_field: gid
+        title_field: name
+        table: geojson_meteoswiss_ods000h0
+        geom_field: geom
+  meteoswiss-jww003i0:
+    type: collection
+    title: "MeteoSwiss - MeteoSwiss-Icon, weathertype, preceding 3 hours, forecast (Code)"
+    description: "MeteoSwiss-Icon, weathertype, preceding 3 hours, forecast. Group: Graphics. Unit: Code."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - graphics
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: PostgreSQL
+        data:
+          host: ${POSTGRES_HOST:-postgis}
+          port: ${POSTGRES_PORT:-5432}
+          dbname: ${POSTGRES_DB:-geodata}
+          user: ${POSTGRES_USER:-geo}
+          password: ${POSTGRES_PASSWORD:-geo}
+          search_path:
+            - public
+        id_field: gid
+        title_field: name
+        table: geojson_meteoswiss_jww003i0
+        geom_field: geom
+  meteoswiss-jp2000d0:
+    type: collection
+    title: "MeteoSwiss - MeteoSwiss pictogram number, daily value (valid for daytime period) (Code)"
+    description: "MeteoSwiss pictogram number, daily value (valid for daytime period). Group: Graphics. Unit: Code."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - graphics
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: PostgreSQL
+        data:
+          host: ${POSTGRES_HOST:-postgis}
+          port: ${POSTGRES_PORT:-5432}
+          dbname: ${POSTGRES_DB:-geodata}
+          user: ${POSTGRES_USER:-geo}
+          password: ${POSTGRES_PASSWORD:-geo}
+          search_path:
+            - public
+        id_field: gid
+        title_field: name
+        table: geojson_meteoswiss_jp2000d0
+        geom_field: geom
+  meteoswiss-nprolohs:
+    type: collection
+    title: "MeteoSwiss - Low cloud cover (-)"
+    description: "Low cloud cover. Group: Clouds. Unit: -."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - clouds
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: PostgreSQL
+        data:
+          host: ${POSTGRES_HOST:-postgis}
+          port: ${POSTGRES_PORT:-5432}
+          dbname: ${POSTGRES_DB:-geodata}
+          user: ${POSTGRES_USER:-geo}
+          password: ${POSTGRES_PASSWORD:-geo}
+          search_path:
+            - public
+        id_field: gid
+        title_field: name
+        table: geojson_meteoswiss_nprolohs
+        geom_field: geom
+  meteoswiss-npromths:
+    type: collection
+    title: "MeteoSwiss - Medium cloud cover (-)"
+    description: "Medium cloud cover. Group: Clouds. Unit: -."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - clouds
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: PostgreSQL
+        data:
+          host: ${POSTGRES_HOST:-postgis}
+          port: ${POSTGRES_PORT:-5432}
+          dbname: ${POSTGRES_DB:-geodata}
+          user: ${POSTGRES_USER:-geo}
+          password: ${POSTGRES_PASSWORD:-geo}
+          search_path:
+            - public
+        id_field: gid
+        title_field: name
+        table: geojson_meteoswiss_npromths
+        geom_field: geom
+  meteoswiss-nprohihs:
+    type: collection
+    title: "MeteoSwiss - High cloud cover (-)"
+    description: "High cloud cover. Group: Clouds. Unit: -."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - clouds
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: PostgreSQL
+        data:
+          host: ${POSTGRES_HOST:-postgis}
+          port: ${POSTGRES_PORT:-5432}
+          dbname: ${POSTGRES_DB:-geodata}
+          user: ${POSTGRES_USER:-geo}
+          password: ${POSTGRES_PASSWORD:-geo}
+          search_path:
+            - public
+        id_field: gid
+        title_field: name
+        table: geojson_meteoswiss_nprohihs
+        geom_field: geom
+  meteoswiss-fu3q10h0:
+    type: collection
+    title: "MeteoSwiss - Wind speed; hourly mean, 10% quantile in km/h (km/h)"
+    description: "Wind speed; hourly mean, 10% quantile in km/h. Group: Wind. Unit: km/h."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - wind
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: PostgreSQL
+        data:
+          host: ${POSTGRES_HOST:-postgis}
+          port: ${POSTGRES_PORT:-5432}
+          dbname: ${POSTGRES_DB:-geodata}
+          user: ${POSTGRES_USER:-geo}
+          password: ${POSTGRES_PASSWORD:-geo}
+          search_path:
+            - public
+        id_field: gid
+        title_field: name
+        table: geojson_meteoswiss_fu3q10h0
+        geom_field: geom
+  meteoswiss-fu3q10h1:
+    type: collection
+    title: "MeteoSwiss - Gust peak; hourly maximum, 10% quantile in km/h (km/h)"
+    description: "Gust peak; hourly maximum, 10% quantile in km/h. Group: Wind. Unit: km/h."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - wind
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: PostgreSQL
+        data:
+          host: ${POSTGRES_HOST:-postgis}
+          port: ${POSTGRES_PORT:-5432}
+          dbname: ${POSTGRES_DB:-geodata}
+          user: ${POSTGRES_USER:-geo}
+          password: ${POSTGRES_PASSWORD:-geo}
+          search_path:
+            - public
+        id_field: gid
+        title_field: name
+        table: geojson_meteoswiss_fu3q10h1
+        geom_field: geom
+  meteoswiss-fu3q90h0:
+    type: collection
+    title: "MeteoSwiss - Wind speed; hourly mean, 90% quantile in km/h (km/h)"
+    description: "Wind speed; hourly mean, 90% quantile in km/h. Group: Wind. Unit: km/h."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - wind
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: PostgreSQL
+        data:
+          host: ${POSTGRES_HOST:-postgis}
+          port: ${POSTGRES_PORT:-5432}
+          dbname: ${POSTGRES_DB:-geodata}
+          user: ${POSTGRES_USER:-geo}
+          password: ${POSTGRES_PASSWORD:-geo}
+          search_path:
+            - public
+        id_field: gid
+        title_field: name
+        table: geojson_meteoswiss_fu3q90h0
+        geom_field: geom
+  meteoswiss-fu3q90h1:
+    type: collection
+    title: "MeteoSwiss - Gust peak; hourly maximum, 90% quantile in km/h (km/h)"
+    description: "Gust peak; hourly maximum, 90% quantile in km/h. Group: Wind. Unit: km/h."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - wind
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: PostgreSQL
+        data:
+          host: ${POSTGRES_HOST:-postgis}
+          port: ${POSTGRES_PORT:-5432}
+          dbname: ${POSTGRES_DB:-geodata}
+          user: ${POSTGRES_USER:-geo}
+          password: ${POSTGRES_PASSWORD:-geo}
+          search_path:
+            - public
+        id_field: gid
+        title_field: name
+        table: geojson_meteoswiss_fu3q90h1
+        geom_field: geom
+  meteoswiss-rka150p0:
+    type: collection
+    title: "MeteoSwiss - Precipitation; daily total 00:00 - 24:00 local time (mm)"
+    description: "Precipitation; daily total 00:00 - 24:00 local time. Group: Precipitation. Unit: mm."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - precipitation
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: PostgreSQL
+        data:
+          host: ${POSTGRES_HOST:-postgis}
+          port: ${POSTGRES_PORT:-5432}
+          dbname: ${POSTGRES_DB:-geodata}
+          user: ${POSTGRES_USER:-geo}
+          password: ${POSTGRES_PASSWORD:-geo}
+          search_path:
+            - public
+        id_field: gid
+        title_field: name
+        table: geojson_meteoswiss_rka150p0
+        geom_field: geom
+  meteoswiss-rp0003i0:
+    type: collection
+    title: "MeteoSwiss - Probability of precipitation during 3 hours (%)"
+    description: "Probability of precipitation during 3 hours. Group: Precipitation. Unit: %."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - precipitation
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: PostgreSQL
+        data:
+          host: ${POSTGRES_HOST:-postgis}
+          port: ${POSTGRES_PORT:-5432}
+          dbname: ${POSTGRES_DB:-geodata}
+          user: ${POSTGRES_USER:-geo}
+          password: ${POSTGRES_PASSWORD:-geo}
+          search_path:
+            - public
+        id_field: gid
+        title_field: name
+        table: geojson_meteoswiss_rp0003i0
+        geom_field: geom
+  meteoswiss-rreq10h0:
+    type: collection
+    title: "MeteoSwiss - Precipitation; hourly total, 10% quantile (mm)"
+    description: "Precipitation; hourly total, 10% quantile. Group: Precipitation. Unit: mm."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - precipitation
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: PostgreSQL
+        data:
+          host: ${POSTGRES_HOST:-postgis}
+          port: ${POSTGRES_PORT:-5432}
+          dbname: ${POSTGRES_DB:-geodata}
+          user: ${POSTGRES_USER:-geo}
+          password: ${POSTGRES_PASSWORD:-geo}
+          search_path:
+            - public
+        id_field: gid
+        title_field: name
+        table: geojson_meteoswiss_rreq10h0
+        geom_field: geom
+  meteoswiss-rreq10p0:
+    type: collection
+    title: "MeteoSwiss - Precipitation; daily total 00:00 - 24:00 local time, 10% quantile (mm)"
+    description: "Precipitation; daily total 00:00 - 24:00 local time, 10% quantile. Group: Precipitation. Unit: mm."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - precipitation
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: PostgreSQL
+        data:
+          host: ${POSTGRES_HOST:-postgis}
+          port: ${POSTGRES_PORT:-5432}
+          dbname: ${POSTGRES_DB:-geodata}
+          user: ${POSTGRES_USER:-geo}
+          password: ${POSTGRES_PASSWORD:-geo}
+          search_path:
+            - public
+        id_field: gid
+        title_field: name
+        table: geojson_meteoswiss_rreq10p0
+        geom_field: geom
+  meteoswiss-rreq90h0:
+    type: collection
+    title: "MeteoSwiss - Precipitation; hourly total, 90% quantile (mm)"
+    description: "Precipitation; hourly total, 90% quantile. Group: Precipitation. Unit: mm."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - precipitation
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: PostgreSQL
+        data:
+          host: ${POSTGRES_HOST:-postgis}
+          port: ${POSTGRES_PORT:-5432}
+          dbname: ${POSTGRES_DB:-geodata}
+          user: ${POSTGRES_USER:-geo}
+          password: ${POSTGRES_PASSWORD:-geo}
+          search_path:
+            - public
+        id_field: gid
+        title_field: name
+        table: geojson_meteoswiss_rreq90h0
+        geom_field: geom
+  meteoswiss-rreq90p0:
+    type: collection
+    title: "MeteoSwiss - Precipitation; daily total 00:00 - 24:00 local time, 90% quantile (mm)"
+    description: "Precipitation; daily total 00:00 - 24:00 local time, 90% quantile. Group: Precipitation. Unit: mm."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - precipitation
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: PostgreSQL
+        data:
+          host: ${POSTGRES_HOST:-postgis}
+          port: ${POSTGRES_PORT:-5432}
+          dbname: ${POSTGRES_DB:-geodata}
+          user: ${POSTGRES_USER:-geo}
+          password: ${POSTGRES_PASSWORD:-geo}
+          search_path:
+            - public
+        id_field: gid
+        title_field: name
+        table: geojson_meteoswiss_rreq90p0
+        geom_field: geom
+  meteoswiss-tre200pn:
+    type: collection
+    title: "MeteoSwiss - Air temperature 2 m above ground; daily minimum 00:00 - 24:00 local time (°C)"
+    description: "Air temperature 2 m above ground; daily minimum 00:00 - 24:00 local time. Group: Temperature. Unit: °C."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - temperature
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: PostgreSQL
+        data:
+          host: ${POSTGRES_HOST:-postgis}
+          port: ${POSTGRES_PORT:-5432}
+          dbname: ${POSTGRES_DB:-geodata}
+          user: ${POSTGRES_USER:-geo}
+          password: ${POSTGRES_PASSWORD:-geo}
+          search_path:
+            - public
+        id_field: gid
+        title_field: name
+        table: geojson_meteoswiss_tre200pn
+        geom_field: geom
+  meteoswiss-tre200px:
+    type: collection
+    title: "MeteoSwiss - Air temperature 2 m above ground; daily maximum 00:00 - 24:00 local time (°C)"
+    description: "Air temperature 2 m above ground; daily maximum 00:00 - 24:00 local time. Group: Temperature. Unit: °C."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - temperature
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: PostgreSQL
+        data:
+          host: ${POSTGRES_HOST:-postgis}
+          port: ${POSTGRES_PORT:-5432}
+          dbname: ${POSTGRES_DB:-geodata}
+          user: ${POSTGRES_USER:-geo}
+          password: ${POSTGRES_PASSWORD:-geo}
+          search_path:
+            - public
+        id_field: gid
+        title_field: name
+        table: geojson_meteoswiss_tre200px
+        geom_field: geom
+  meteoswiss-treq10h0:
+    type: collection
+    title: "MeteoSwiss - Air temperature 2 m above ground; hourly mean, 10% quantile (°C)"
+    description: "Air temperature 2 m above ground; hourly mean, 10% quantile. Group: Temperature. Unit: °C."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - temperature
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: PostgreSQL
+        data:
+          host: ${POSTGRES_HOST:-postgis}
+          port: ${POSTGRES_PORT:-5432}
+          dbname: ${POSTGRES_DB:-geodata}
+          user: ${POSTGRES_USER:-geo}
+          password: ${POSTGRES_PASSWORD:-geo}
+          search_path:
+            - public
+        id_field: gid
+        title_field: name
+        table: geojson_meteoswiss_treq10h0
+        geom_field: geom
+  meteoswiss-treq90h0:
+    type: collection
+    title: "MeteoSwiss - Air temperature 2 m above ground; hourly mean, 90% quantile (°C)"
+    description: "Air temperature 2 m above ground; hourly mean, 90% quantile. Group: Temperature. Unit: °C."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - temperature
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: PostgreSQL
+        data:
+          host: ${POSTGRES_HOST:-postgis}
+          port: ${POSTGRES_PORT:-5432}
+          dbname: ${POSTGRES_DB:-geodata}
+          user: ${POSTGRES_USER:-geo}
+          password: ${POSTGRES_PASSWORD:-geo}
+          search_path:
+            - public
+        id_field: gid
+        title_field: name
+        table: geojson_meteoswiss_treq90h0
+        geom_field: geom
+
+  # ── MeteoSwiss OpenSearch collections ──────────────────────────────────────
+
+  meteoswiss-tre200dx-opensearch:
+    type: collection
+    title: "OpenSearch - MeteoSwiss - Air temperature 2 m above ground; daily maximum (°C)"
+    description: "Air temperature 2 m above ground; daily maximum. Group: Temperature. Unit: °C."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - temperature
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: OpenSearch
+        data: http://${OPENSEARCH_HOST:-opensearch}:${OPENSEARCH_PORT:-9200}/geojson-meteoswiss-tre200dx
+        open_search: true
+        id_field: id
+        title_field: properties.name
+
+  meteoswiss-tre200dn-opensearch:
+    type: collection
+    title: "OpenSearch - MeteoSwiss - Air temperature 2 m above ground; daily minimum (°C)"
+    description: "Air temperature 2 m above ground; daily minimum. Group: Temperature. Unit: °C."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - temperature
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: OpenSearch
+        data: http://${OPENSEARCH_HOST:-opensearch}:${OPENSEARCH_PORT:-9200}/geojson-meteoswiss-tre200dn
+        open_search: true
+        id_field: id
+        title_field: properties.name
+
+  meteoswiss-rka150d0-opensearch:
+    type: collection
+    title: "OpenSearch - MeteoSwiss - Precipitation; daily total 0 UTC - 0 UTC (mm)"
+    description: "Precipitation; daily total 0 UTC - 0 UTC. Group: Precipitation. Unit: mm."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - precipitation
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: OpenSearch
+        data: http://${OPENSEARCH_HOST:-opensearch}:${OPENSEARCH_PORT:-9200}/geojson-meteoswiss-rka150d0
+        open_search: true
+        id_field: id
+        title_field: properties.name
+
+  meteoswiss-tre200h0-opensearch:
+    type: collection
+    title: "OpenSearch - MeteoSwiss - Air temperature 2 m above ground; hourly mean (°C)"
+    description: "Air temperature 2 m above ground; hourly mean. Group: Temperature. Unit: °C."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - temperature
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: OpenSearch
+        data: http://${OPENSEARCH_HOST:-opensearch}:${OPENSEARCH_PORT:-9200}/geojson-meteoswiss-tre200h0
+        open_search: true
+        id_field: id
+        title_field: properties.name
+
+  meteoswiss-rre150h0-opensearch:
+    type: collection
+    title: "OpenSearch - MeteoSwiss - Precipitation; hourly total (mm)"
+    description: "Precipitation; hourly total. Group: Precipitation. Unit: mm."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - precipitation
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: OpenSearch
+        data: http://${OPENSEARCH_HOST:-opensearch}:${OPENSEARCH_PORT:-9200}/geojson-meteoswiss-rre150h0
+        open_search: true
+        id_field: id
+        title_field: properties.name
+
+  meteoswiss-gre000h0-opensearch:
+    type: collection
+    title: "OpenSearch - MeteoSwiss - Global radiation; hourly mean (W/m²)"
+    description: "Global radiation; hourly mean. Group: Radiation. Unit: W/m²."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - radiation
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: OpenSearch
+        data: http://${OPENSEARCH_HOST:-opensearch}:${OPENSEARCH_PORT:-9200}/geojson-meteoswiss-gre000h0
+        open_search: true
+        id_field: id
+        title_field: properties.name
+
+  meteoswiss-sre000h0-opensearch:
+    type: collection
+    title: "OpenSearch - MeteoSwiss - Sunshine duration; hourly total (min)"
+    description: "Sunshine duration; hourly total. Group: Sunshine. Unit: min."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - sunshine
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: OpenSearch
+        data: http://${OPENSEARCH_HOST:-opensearch}:${OPENSEARCH_PORT:-9200}/geojson-meteoswiss-sre000h0
+        open_search: true
+        id_field: id
+        title_field: properties.name
+
+  meteoswiss-dkl010h0-opensearch:
+    type: collection
+    title: "OpenSearch - MeteoSwiss - Wind direction; hourly mean (°)"
+    description: "Wind direction; hourly mean. Group: Wind. Unit: °."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - wind
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: OpenSearch
+        data: http://${OPENSEARCH_HOST:-opensearch}:${OPENSEARCH_PORT:-9200}/geojson-meteoswiss-dkl010h0
+        open_search: true
+        id_field: id
+        title_field: properties.name
+
+  meteoswiss-fu3010h0-opensearch:
+    type: collection
+    title: "OpenSearch - MeteoSwiss - Wind speed scalar; hourly mean in km/h (km/h)"
+    description: "Wind speed scalar; hourly mean in km/h. Group: Wind. Unit: km/h."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - wind
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: OpenSearch
+        data: http://${OPENSEARCH_HOST:-opensearch}:${OPENSEARCH_PORT:-9200}/geojson-meteoswiss-fu3010h0
+        open_search: true
+        id_field: id
+        title_field: properties.name
+
+  meteoswiss-fu3010h1-opensearch:
+    type: collection
+    title: "OpenSearch - MeteoSwiss - Gust peak (one second); hourly maximum in km/h (km/h)"
+    description: "Gust peak (one second); hourly maximum in km/h. Group: Wind. Unit: km/h."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - wind
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: OpenSearch
+        data: http://${OPENSEARCH_HOST:-opensearch}:${OPENSEARCH_PORT:-9200}/geojson-meteoswiss-fu3010h1
+        open_search: true
+        id_field: id
+        title_field: properties.name
+
+  meteoswiss-zprfr0hs-opensearch:
+    type: collection
+    title: "OpenSearch - MeteoSwiss - Zero degree level; hourly value, forecast (m)"
+    description: "Zero degree level; hourly value, forecast. Group: Temperature. Unit: m."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - temperature
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: OpenSearch
+        data: http://${OPENSEARCH_HOST:-opensearch}:${OPENSEARCH_PORT:-9200}/geojson-meteoswiss-zprfr0hs
+        open_search: true
+        id_field: id
+        title_field: properties.name
+
+  meteoswiss-rre003i0-opensearch:
+    type: collection
+    title: "OpenSearch - MeteoSwiss - Total precipitation during 3 hours (mm)"
+    description: "Total precipitation during 3 hours. Group: Precipitation. Unit: mm."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - precipitation
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: OpenSearch
+        data: http://${OPENSEARCH_HOST:-opensearch}:${OPENSEARCH_PORT:-9200}/geojson-meteoswiss-rre003i0
+        open_search: true
+        id_field: id
+        title_field: properties.name
+
+  meteoswiss-ods000h0-opensearch:
+    type: collection
+    title: "OpenSearch - MeteoSwiss - Diffuse radiation; hourly mean (W/m²)"
+    description: "Diffuse radiation; hourly mean. Group: Radiation. Unit: W/m²."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - radiation
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: OpenSearch
+        data: http://${OPENSEARCH_HOST:-opensearch}:${OPENSEARCH_PORT:-9200}/geojson-meteoswiss-ods000h0
+        open_search: true
+        id_field: id
+        title_field: properties.name
+
+  meteoswiss-jww003i0-opensearch:
+    type: collection
+    title: "OpenSearch - MeteoSwiss - MeteoSwiss-Icon, weathertype, preceding 3 hours, forecast (Code)"
+    description: "MeteoSwiss-Icon, weathertype, preceding 3 hours, forecast. Group: Graphics. Unit: Code."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - graphics
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: OpenSearch
+        data: http://${OPENSEARCH_HOST:-opensearch}:${OPENSEARCH_PORT:-9200}/geojson-meteoswiss-jww003i0
+        open_search: true
+        id_field: id
+        title_field: properties.name
+
+  meteoswiss-jp2000d0-opensearch:
+    type: collection
+    title: "OpenSearch - MeteoSwiss - MeteoSwiss pictogram number, daily value (valid for daytime period) (Code)"
+    description: "MeteoSwiss pictogram number, daily value (valid for daytime period). Group: Graphics. Unit: Code."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - graphics
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: OpenSearch
+        data: http://${OPENSEARCH_HOST:-opensearch}:${OPENSEARCH_PORT:-9200}/geojson-meteoswiss-jp2000d0
+        open_search: true
+        id_field: id
+        title_field: properties.name
+
+  meteoswiss-nprolohs-opensearch:
+    type: collection
+    title: "OpenSearch - MeteoSwiss - Low cloud cover (-)"
+    description: "Low cloud cover. Group: Clouds. Unit: -."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - clouds
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: OpenSearch
+        data: http://${OPENSEARCH_HOST:-opensearch}:${OPENSEARCH_PORT:-9200}/geojson-meteoswiss-nprolohs
+        open_search: true
+        id_field: id
+        title_field: properties.name
+
+  meteoswiss-npromths-opensearch:
+    type: collection
+    title: "OpenSearch - MeteoSwiss - Medium cloud cover (-)"
+    description: "Medium cloud cover. Group: Clouds. Unit: -."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - clouds
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: OpenSearch
+        data: http://${OPENSEARCH_HOST:-opensearch}:${OPENSEARCH_PORT:-9200}/geojson-meteoswiss-npromths
+        open_search: true
+        id_field: id
+        title_field: properties.name
+
+  meteoswiss-nprohihs-opensearch:
+    type: collection
+    title: "OpenSearch - MeteoSwiss - High cloud cover (-)"
+    description: "High cloud cover. Group: Clouds. Unit: -."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - clouds
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: OpenSearch
+        data: http://${OPENSEARCH_HOST:-opensearch}:${OPENSEARCH_PORT:-9200}/geojson-meteoswiss-nprohihs
+        open_search: true
+        id_field: id
+        title_field: properties.name
+
+  meteoswiss-fu3q10h0-opensearch:
+    type: collection
+    title: "OpenSearch - MeteoSwiss - Wind speed; hourly mean, 10% quantile in km/h (km/h)"
+    description: "Wind speed; hourly mean, 10% quantile in km/h. Group: Wind. Unit: km/h."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - wind
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: OpenSearch
+        data: http://${OPENSEARCH_HOST:-opensearch}:${OPENSEARCH_PORT:-9200}/geojson-meteoswiss-fu3q10h0
+        open_search: true
+        id_field: id
+        title_field: properties.name
+
+  meteoswiss-fu3q10h1-opensearch:
+    type: collection
+    title: "OpenSearch - MeteoSwiss - Gust peak; hourly maximum, 10% quantile in km/h (km/h)"
+    description: "Gust peak; hourly maximum, 10% quantile in km/h. Group: Wind. Unit: km/h."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - wind
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: OpenSearch
+        data: http://${OPENSEARCH_HOST:-opensearch}:${OPENSEARCH_PORT:-9200}/geojson-meteoswiss-fu3q10h1
+        open_search: true
+        id_field: id
+        title_field: properties.name
+
+  meteoswiss-fu3q90h0-opensearch:
+    type: collection
+    title: "OpenSearch - MeteoSwiss - Wind speed; hourly mean, 90% quantile in km/h (km/h)"
+    description: "Wind speed; hourly mean, 90% quantile in km/h. Group: Wind. Unit: km/h."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - wind
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: OpenSearch
+        data: http://${OPENSEARCH_HOST:-opensearch}:${OPENSEARCH_PORT:-9200}/geojson-meteoswiss-fu3q90h0
+        open_search: true
+        id_field: id
+        title_field: properties.name
+
+  meteoswiss-fu3q90h1-opensearch:
+    type: collection
+    title: "OpenSearch - MeteoSwiss - Gust peak; hourly maximum, 90% quantile in km/h (km/h)"
+    description: "Gust peak; hourly maximum, 90% quantile in km/h. Group: Wind. Unit: km/h."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - wind
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: OpenSearch
+        data: http://${OPENSEARCH_HOST:-opensearch}:${OPENSEARCH_PORT:-9200}/geojson-meteoswiss-fu3q90h1
+        open_search: true
+        id_field: id
+        title_field: properties.name
+
+  meteoswiss-rka150p0-opensearch:
+    type: collection
+    title: "OpenSearch - MeteoSwiss - Precipitation; daily total 00:00 - 24:00 local time (mm)"
+    description: "Precipitation; daily total 00:00 - 24:00 local time. Group: Precipitation. Unit: mm."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - precipitation
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: OpenSearch
+        data: http://${OPENSEARCH_HOST:-opensearch}:${OPENSEARCH_PORT:-9200}/geojson-meteoswiss-rka150p0
+        open_search: true
+        id_field: id
+        title_field: properties.name
+
+  meteoswiss-rp0003i0-opensearch:
+    type: collection
+    title: "OpenSearch - MeteoSwiss - Probability of precipitation during 3 hours (%)"
+    description: "Probability of precipitation during 3 hours. Group: Precipitation. Unit: %."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - precipitation
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: OpenSearch
+        data: http://${OPENSEARCH_HOST:-opensearch}:${OPENSEARCH_PORT:-9200}/geojson-meteoswiss-rp0003i0
+        open_search: true
+        id_field: id
+        title_field: properties.name
+
+  meteoswiss-rreq10h0-opensearch:
+    type: collection
+    title: "OpenSearch - MeteoSwiss - Precipitation; hourly total, 10% quantile (mm)"
+    description: "Precipitation; hourly total, 10% quantile. Group: Precipitation. Unit: mm."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - precipitation
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: OpenSearch
+        data: http://${OPENSEARCH_HOST:-opensearch}:${OPENSEARCH_PORT:-9200}/geojson-meteoswiss-rreq10h0
+        open_search: true
+        id_field: id
+        title_field: properties.name
+
+  meteoswiss-rreq10p0-opensearch:
+    type: collection
+    title: "OpenSearch - MeteoSwiss - Precipitation; daily total 00:00 - 24:00 local time, 10% quantile (mm)"
+    description: "Precipitation; daily total 00:00 - 24:00 local time, 10% quantile. Group: Precipitation. Unit: mm."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - precipitation
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: OpenSearch
+        data: http://${OPENSEARCH_HOST:-opensearch}:${OPENSEARCH_PORT:-9200}/geojson-meteoswiss-rreq10p0
+        open_search: true
+        id_field: id
+        title_field: properties.name
+
+  meteoswiss-rreq90h0-opensearch:
+    type: collection
+    title: "OpenSearch - MeteoSwiss - Precipitation; hourly total, 90% quantile (mm)"
+    description: "Precipitation; hourly total, 90% quantile. Group: Precipitation. Unit: mm."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - precipitation
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: OpenSearch
+        data: http://${OPENSEARCH_HOST:-opensearch}:${OPENSEARCH_PORT:-9200}/geojson-meteoswiss-rreq90h0
+        open_search: true
+        id_field: id
+        title_field: properties.name
+
+  meteoswiss-rreq90p0-opensearch:
+    type: collection
+    title: "OpenSearch - MeteoSwiss - Precipitation; daily total 00:00 - 24:00 local time, 90% quantile (mm)"
+    description: "Precipitation; daily total 00:00 - 24:00 local time, 90% quantile. Group: Precipitation. Unit: mm."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - precipitation
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: OpenSearch
+        data: http://${OPENSEARCH_HOST:-opensearch}:${OPENSEARCH_PORT:-9200}/geojson-meteoswiss-rreq90p0
+        open_search: true
+        id_field: id
+        title_field: properties.name
+
+  meteoswiss-tre200pn-opensearch:
+    type: collection
+    title: "OpenSearch - MeteoSwiss - Air temperature 2 m above ground; daily minimum 00:00 - 24:00 local time (°C)"
+    description: "Air temperature 2 m above ground; daily minimum 00:00 - 24:00 local time. Group: Temperature. Unit: °C."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - temperature
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: OpenSearch
+        data: http://${OPENSEARCH_HOST:-opensearch}:${OPENSEARCH_PORT:-9200}/geojson-meteoswiss-tre200pn
+        open_search: true
+        id_field: id
+        title_field: properties.name
+
+  meteoswiss-tre200px-opensearch:
+    type: collection
+    title: "OpenSearch - MeteoSwiss - Air temperature 2 m above ground; daily maximum 00:00 - 24:00 local time (°C)"
+    description: "Air temperature 2 m above ground; daily maximum 00:00 - 24:00 local time. Group: Temperature. Unit: °C."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - temperature
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: OpenSearch
+        data: http://${OPENSEARCH_HOST:-opensearch}:${OPENSEARCH_PORT:-9200}/geojson-meteoswiss-tre200px
+        open_search: true
+        id_field: id
+        title_field: properties.name
+
+  meteoswiss-treq10h0-opensearch:
+    type: collection
+    title: "OpenSearch - MeteoSwiss - Air temperature 2 m above ground; hourly mean, 10% quantile (°C)"
+    description: "Air temperature 2 m above ground; hourly mean, 10% quantile. Group: Temperature. Unit: °C."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - temperature
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: OpenSearch
+        data: http://${OPENSEARCH_HOST:-opensearch}:${OPENSEARCH_PORT:-9200}/geojson-meteoswiss-treq10h0
+        open_search: true
+        id_field: id
+        title_field: properties.name
+
+  meteoswiss-treq90h0-opensearch:
+    type: collection
+    title: "OpenSearch - MeteoSwiss - Air temperature 2 m above ground; hourly mean, 90% quantile (°C)"
+    description: "Air temperature 2 m above ground; hourly mean, 90% quantile. Group: Temperature. Unit: °C."
+    keywords:
+      - meteoswiss
+      - weather
+      - forecast
+      - temperature
+    links:
+      - type: text/html
+        rel: canonical
+        title: MeteoSwiss Open Data
+        href: https://www.meteoswiss.admin.ch/services-and-publications/service/open-government-data.html
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [5.9, 45.8, 10.5, 47.9]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: OpenSearch
+        data: http://${OPENSEARCH_HOST:-opensearch}:${OPENSEARCH_PORT:-9200}/geojson-meteoswiss-treq90h0
+        open_search: true
+        id_field: id
+        title_field: properties.name

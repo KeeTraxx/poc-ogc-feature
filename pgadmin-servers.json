@@ -1,0 +1,14 @@
+{
+  "Servers": {
+    "1": {
+      "Name": "PostGIS (geodata)",
+      "Group": "Servers",
+      "Host": "postgis",
+      "Port": 5432,
+      "MaintenanceDB": "geodata",
+      "Username": "geo",
+      "SSLMode": "prefer",
+      "PassFile": "/pgpass"
+    }
+  }
+}

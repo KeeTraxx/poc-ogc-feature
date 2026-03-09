@@ -242,4 +242,1061 @@ MAP
     END
   END
 
+  # ── MeteoSwiss Forecast Layers ──
+  # ── MeteoSwiss: tre200dx ──
+  LAYER
+    NAME "meteoswiss-tre200dx"
+    STATUS ON
+    TYPE POINT
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=postgis dbname=geodata user=geo password=geo port=5432"
+    DATA "geom FROM geojson_meteoswiss_tre200dx USING UNIQUE gid USING SRID=4326"
+    TEMPLATE "void"
+    METADATA
+      "ows_title"         "MeteoSwiss - Air temperature 2 m above ground; daily maximum"
+      "ows_abstract"      "Air temperature 2 m above ground; daily maximum (Temperature)"
+      "ows_srs"           "EPSG:4326 EPSG:2056 EPSG:3857"
+      "gml_include_items" "all"
+      "gml_featureid"     "gid"
+      "oga_title"         "MeteoSwiss - Air temperature 2 m above ground; daily maximum"
+      "oga_description"   "Air temperature 2 m above ground; daily maximum (Temperature)"
+    END
+    PROJECTION
+      "init=epsg:4326"
+    END
+    CLASS
+      NAME "tre200dx"
+      STYLE
+        SYMBOL "circle"
+        SIZE 6
+        COLOR 50 100 200
+        OUTLINECOLOR 20 50 120
+        WIDTH 1
+      END
+    END
+  END
+
+  # ── MeteoSwiss: tre200dn ──
+  LAYER
+    NAME "meteoswiss-tre200dn"
+    STATUS ON
+    TYPE POINT
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=postgis dbname=geodata user=geo password=geo port=5432"
+    DATA "geom FROM geojson_meteoswiss_tre200dn USING UNIQUE gid USING SRID=4326"
+    TEMPLATE "void"
+    METADATA
+      "ows_title"         "MeteoSwiss - Air temperature 2 m above ground; daily minimum"
+      "ows_abstract"      "Air temperature 2 m above ground; daily minimum (Temperature)"
+      "ows_srs"           "EPSG:4326 EPSG:2056 EPSG:3857"
+      "gml_include_items" "all"
+      "gml_featureid"     "gid"
+      "oga_title"         "MeteoSwiss - Air temperature 2 m above ground; daily minimum"
+      "oga_description"   "Air temperature 2 m above ground; daily minimum (Temperature)"
+    END
+    PROJECTION
+      "init=epsg:4326"
+    END
+    CLASS
+      NAME "tre200dn"
+      STYLE
+        SYMBOL "circle"
+        SIZE 6
+        COLOR 50 100 200
+        OUTLINECOLOR 20 50 120
+        WIDTH 1
+      END
+    END
+  END
+
+  # ── MeteoSwiss: rka150d0 ──
+  LAYER
+    NAME "meteoswiss-rka150d0"
+    STATUS ON
+    TYPE POINT
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=postgis dbname=geodata user=geo password=geo port=5432"
+    DATA "geom FROM geojson_meteoswiss_rka150d0 USING UNIQUE gid USING SRID=4326"
+    TEMPLATE "void"
+    METADATA
+      "ows_title"         "MeteoSwiss - Precipitation; daily total 0 UTC - 0 UTC"
+      "ows_abstract"      "Precipitation; daily total 0 UTC - 0 UTC (Precipitation)"
+      "ows_srs"           "EPSG:4326 EPSG:2056 EPSG:3857"
+      "gml_include_items" "all"
+      "gml_featureid"     "gid"
+      "oga_title"         "MeteoSwiss - Precipitation; daily total 0 UTC - 0 UTC"
+      "oga_description"   "Precipitation; daily total 0 UTC - 0 UTC (Precipitation)"
+    END
+    PROJECTION
+      "init=epsg:4326"
+    END
+    CLASS
+      NAME "rka150d0"
+      STYLE
+        SYMBOL "circle"
+        SIZE 6
+        COLOR 50 100 200
+        OUTLINECOLOR 20 50 120
+        WIDTH 1
+      END
+    END
+  END
+
+  # ── MeteoSwiss: tre200h0 ──
+  LAYER
+    NAME "meteoswiss-tre200h0"
+    STATUS ON
+    TYPE POINT
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=postgis dbname=geodata user=geo password=geo port=5432"
+    DATA "geom FROM geojson_meteoswiss_tre200h0 USING UNIQUE gid USING SRID=4326"
+    TEMPLATE "void"
+    METADATA
+      "ows_title"         "MeteoSwiss - Air temperature 2 m above ground; hourly mean"
+      "ows_abstract"      "Air temperature 2 m above ground; hourly mean (Temperature)"
+      "ows_srs"           "EPSG:4326 EPSG:2056 EPSG:3857"
+      "gml_include_items" "all"
+      "gml_featureid"     "gid"
+      "oga_title"         "MeteoSwiss - Air temperature 2 m above ground; hourly mean"
+      "oga_description"   "Air temperature 2 m above ground; hourly mean (Temperature)"
+    END
+    PROJECTION
+      "init=epsg:4326"
+    END
+    CLASS
+      NAME "tre200h0"
+      STYLE
+        SYMBOL "circle"
+        SIZE 6
+        COLOR 50 100 200
+        OUTLINECOLOR 20 50 120
+        WIDTH 1
+      END
+    END
+  END
+
+  # ── MeteoSwiss: rre150h0 ──
+  LAYER
+    NAME "meteoswiss-rre150h0"
+    STATUS ON
+    TYPE POINT
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=postgis dbname=geodata user=geo password=geo port=5432"
+    DATA "geom FROM geojson_meteoswiss_rre150h0 USING UNIQUE gid USING SRID=4326"
+    TEMPLATE "void"
+    METADATA
+      "ows_title"         "MeteoSwiss - Precipitation; hourly total"
+      "ows_abstract"      "Precipitation; hourly total (Precipitation)"
+      "ows_srs"           "EPSG:4326 EPSG:2056 EPSG:3857"
+      "gml_include_items" "all"
+      "gml_featureid"     "gid"
+      "oga_title"         "MeteoSwiss - Precipitation; hourly total"
+      "oga_description"   "Precipitation; hourly total (Precipitation)"
+    END
+    PROJECTION
+      "init=epsg:4326"
+    END
+    CLASS
+      NAME "rre150h0"
+      STYLE
+        SYMBOL "circle"
+        SIZE 6
+        COLOR 50 100 200
+        OUTLINECOLOR 20 50 120
+        WIDTH 1
+      END
+    END
+  END
+
+  # ── MeteoSwiss: gre000h0 ──
+  LAYER
+    NAME "meteoswiss-gre000h0"
+    STATUS ON
+    TYPE POINT
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=postgis dbname=geodata user=geo password=geo port=5432"
+    DATA "geom FROM geojson_meteoswiss_gre000h0 USING UNIQUE gid USING SRID=4326"
+    TEMPLATE "void"
+    METADATA
+      "ows_title"         "MeteoSwiss - Global radiation; hourly mean"
+      "ows_abstract"      "Global radiation; hourly mean (Radiation)"
+      "ows_srs"           "EPSG:4326 EPSG:2056 EPSG:3857"
+      "gml_include_items" "all"
+      "gml_featureid"     "gid"
+      "oga_title"         "MeteoSwiss - Global radiation; hourly mean"
+      "oga_description"   "Global radiation; hourly mean (Radiation)"
+    END
+    PROJECTION
+      "init=epsg:4326"
+    END
+    CLASS
+      NAME "gre000h0"
+      STYLE
+        SYMBOL "circle"
+        SIZE 6
+        COLOR 50 100 200
+        OUTLINECOLOR 20 50 120
+        WIDTH 1
+      END
+    END
+  END
+
+  # ── MeteoSwiss: sre000h0 ──
+  LAYER
+    NAME "meteoswiss-sre000h0"
+    STATUS ON
+    TYPE POINT
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=postgis dbname=geodata user=geo password=geo port=5432"
+    DATA "geom FROM geojson_meteoswiss_sre000h0 USING UNIQUE gid USING SRID=4326"
+    TEMPLATE "void"
+    METADATA
+      "ows_title"         "MeteoSwiss - Sunshine duration; hourly total"
+      "ows_abstract"      "Sunshine duration; hourly total (Sunshine)"
+      "ows_srs"           "EPSG:4326 EPSG:2056 EPSG:3857"
+      "gml_include_items" "all"
+      "gml_featureid"     "gid"
+      "oga_title"         "MeteoSwiss - Sunshine duration; hourly total"
+      "oga_description"   "Sunshine duration; hourly total (Sunshine)"
+    END
+    PROJECTION
+      "init=epsg:4326"
+    END
+    CLASS
+      NAME "sre000h0"
+      STYLE
+        SYMBOL "circle"
+        SIZE 6
+        COLOR 50 100 200
+        OUTLINECOLOR 20 50 120
+        WIDTH 1
+      END
+    END
+  END
+
+  # ── MeteoSwiss: dkl010h0 ──
+  LAYER
+    NAME "meteoswiss-dkl010h0"
+    STATUS ON
+    TYPE POINT
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=postgis dbname=geodata user=geo password=geo port=5432"
+    DATA "geom FROM geojson_meteoswiss_dkl010h0 USING UNIQUE gid USING SRID=4326"
+    TEMPLATE "void"
+    METADATA
+      "ows_title"         "MeteoSwiss - Wind direction; hourly mean"
+      "ows_abstract"      "Wind direction; hourly mean (Wind)"
+      "ows_srs"           "EPSG:4326 EPSG:2056 EPSG:3857"
+      "gml_include_items" "all"
+      "gml_featureid"     "gid"
+      "oga_title"         "MeteoSwiss - Wind direction; hourly mean"
+      "oga_description"   "Wind direction; hourly mean (Wind)"
+    END
+    PROJECTION
+      "init=epsg:4326"
+    END
+    CLASS
+      NAME "dkl010h0"
+      STYLE
+        SYMBOL "circle"
+        SIZE 6
+        COLOR 50 100 200
+        OUTLINECOLOR 20 50 120
+        WIDTH 1
+      END
+    END
+  END
+
+  # ── MeteoSwiss: fu3010h0 ──
+  LAYER
+    NAME "meteoswiss-fu3010h0"
+    STATUS ON
+    TYPE POINT
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=postgis dbname=geodata user=geo password=geo port=5432"
+    DATA "geom FROM geojson_meteoswiss_fu3010h0 USING UNIQUE gid USING SRID=4326"
+    TEMPLATE "void"
+    METADATA
+      "ows_title"         "MeteoSwiss - Wind speed scalar; hourly mean in km/h"
+      "ows_abstract"      "Wind speed scalar; hourly mean in km/h (Wind)"
+      "ows_srs"           "EPSG:4326 EPSG:2056 EPSG:3857"
+      "gml_include_items" "all"
+      "gml_featureid"     "gid"
+      "oga_title"         "MeteoSwiss - Wind speed scalar; hourly mean in km/h"
+      "oga_description"   "Wind speed scalar; hourly mean in km/h (Wind)"
+    END
+    PROJECTION
+      "init=epsg:4326"
+    END
+    CLASS
+      NAME "fu3010h0"
+      STYLE
+        SYMBOL "circle"
+        SIZE 6
+        COLOR 50 100 200
+        OUTLINECOLOR 20 50 120
+        WIDTH 1
+      END
+    END
+  END
+
+  # ── MeteoSwiss: fu3010h1 ──
+  LAYER
+    NAME "meteoswiss-fu3010h1"
+    STATUS ON
+    TYPE POINT
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=postgis dbname=geodata user=geo password=geo port=5432"
+    DATA "geom FROM geojson_meteoswiss_fu3010h1 USING UNIQUE gid USING SRID=4326"
+    TEMPLATE "void"
+    METADATA
+      "ows_title"         "MeteoSwiss - Gust peak (one second); hourly maximum in km/h"
+      "ows_abstract"      "Gust peak (one second); hourly maximum in km/h (Wind)"
+      "ows_srs"           "EPSG:4326 EPSG:2056 EPSG:3857"
+      "gml_include_items" "all"
+      "gml_featureid"     "gid"
+      "oga_title"         "MeteoSwiss - Gust peak (one second); hourly maximum in km/h"
+      "oga_description"   "Gust peak (one second); hourly maximum in km/h (Wind)"
+    END
+    PROJECTION
+      "init=epsg:4326"
+    END
+    CLASS
+      NAME "fu3010h1"
+      STYLE
+        SYMBOL "circle"
+        SIZE 6
+        COLOR 50 100 200
+        OUTLINECOLOR 20 50 120
+        WIDTH 1
+      END
+    END
+  END
+
+  # ── MeteoSwiss: zprfr0hs ──
+  LAYER
+    NAME "meteoswiss-zprfr0hs"
+    STATUS ON
+    TYPE POINT
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=postgis dbname=geodata user=geo password=geo port=5432"
+    DATA "geom FROM geojson_meteoswiss_zprfr0hs USING UNIQUE gid USING SRID=4326"
+    TEMPLATE "void"
+    METADATA
+      "ows_title"         "MeteoSwiss - Zero degree level; hourly value, forecast"
+      "ows_abstract"      "Zero degree level; hourly value, forecast (Temperature)"
+      "ows_srs"           "EPSG:4326 EPSG:2056 EPSG:3857"
+      "gml_include_items" "all"
+      "gml_featureid"     "gid"
+      "oga_title"         "MeteoSwiss - Zero degree level; hourly value, forecast"
+      "oga_description"   "Zero degree level; hourly value, forecast (Temperature)"
+    END
+    PROJECTION
+      "init=epsg:4326"
+    END
+    CLASS
+      NAME "zprfr0hs"
+      STYLE
+        SYMBOL "circle"
+        SIZE 6
+        COLOR 50 100 200
+        OUTLINECOLOR 20 50 120
+        WIDTH 1
+      END
+    END
+  END
+
+  # ── MeteoSwiss: rre003i0 ──
+  LAYER
+    NAME "meteoswiss-rre003i0"
+    STATUS ON
+    TYPE POINT
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=postgis dbname=geodata user=geo password=geo port=5432"
+    DATA "geom FROM geojson_meteoswiss_rre003i0 USING UNIQUE gid USING SRID=4326"
+    TEMPLATE "void"
+    METADATA
+      "ows_title"         "MeteoSwiss - Total precipitation during 3 hours"
+      "ows_abstract"      "Total precipitation during 3 hours (Precipitation)"
+      "ows_srs"           "EPSG:4326 EPSG:2056 EPSG:3857"
+      "gml_include_items" "all"
+      "gml_featureid"     "gid"
+      "oga_title"         "MeteoSwiss - Total precipitation during 3 hours"
+      "oga_description"   "Total precipitation during 3 hours (Precipitation)"
+    END
+    PROJECTION
+      "init=epsg:4326"
+    END
+    CLASS
+      NAME "rre003i0"
+      STYLE
+        SYMBOL "circle"
+        SIZE 6
+        COLOR 50 100 200
+        OUTLINECOLOR 20 50 120
+        WIDTH 1
+      END
+    END
+  END
+
+  # ── MeteoSwiss: ods000h0 ──
+  LAYER
+    NAME "meteoswiss-ods000h0"
+    STATUS ON
+    TYPE POINT
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=postgis dbname=geodata user=geo password=geo port=5432"
+    DATA "geom FROM geojson_meteoswiss_ods000h0 USING UNIQUE gid USING SRID=4326"
+    TEMPLATE "void"
+    METADATA
+      "ows_title"         "MeteoSwiss - Diffuse radiation; hourly mean"
+      "ows_abstract"      "Diffuse radiation; hourly mean (Radiation)"
+      "ows_srs"           "EPSG:4326 EPSG:2056 EPSG:3857"
+      "gml_include_items" "all"
+      "gml_featureid"     "gid"
+      "oga_title"         "MeteoSwiss - Diffuse radiation; hourly mean"
+      "oga_description"   "Diffuse radiation; hourly mean (Radiation)"
+    END
+    PROJECTION
+      "init=epsg:4326"
+    END
+    CLASS
+      NAME "ods000h0"
+      STYLE
+        SYMBOL "circle"
+        SIZE 6
+        COLOR 50 100 200
+        OUTLINECOLOR 20 50 120
+        WIDTH 1
+      END
+    END
+  END
+
+  # ── MeteoSwiss: jww003i0 ──
+  LAYER
+    NAME "meteoswiss-jww003i0"
+    STATUS ON
+    TYPE POINT
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=postgis dbname=geodata user=geo password=geo port=5432"
+    DATA "geom FROM geojson_meteoswiss_jww003i0 USING UNIQUE gid USING SRID=4326"
+    TEMPLATE "void"
+    METADATA
+      "ows_title"         "MeteoSwiss - MeteoSwiss-Icon, weathertype, preceding 3 hours, forecast"
+      "ows_abstract"      "MeteoSwiss-Icon, weathertype, preceding 3 hours, forecast (Graphics)"
+      "ows_srs"           "EPSG:4326 EPSG:2056 EPSG:3857"
+      "gml_include_items" "all"
+      "gml_featureid"     "gid"
+      "oga_title"         "MeteoSwiss - MeteoSwiss-Icon, weathertype, preceding 3 hours, forecast"
+      "oga_description"   "MeteoSwiss-Icon, weathertype, preceding 3 hours, forecast (Graphics)"
+    END
+    PROJECTION
+      "init=epsg:4326"
+    END
+    CLASS
+      NAME "jww003i0"
+      STYLE
+        SYMBOL "circle"
+        SIZE 6
+        COLOR 50 100 200
+        OUTLINECOLOR 20 50 120
+        WIDTH 1
+      END
+    END
+  END
+
+  # ── MeteoSwiss: jp2000d0 ──
+  LAYER
+    NAME "meteoswiss-jp2000d0"
+    STATUS ON
+    TYPE POINT
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=postgis dbname=geodata user=geo password=geo port=5432"
+    DATA "geom FROM geojson_meteoswiss_jp2000d0 USING UNIQUE gid USING SRID=4326"
+    TEMPLATE "void"
+    METADATA
+      "ows_title"         "MeteoSwiss - MeteoSwiss pictogram number, daily value (valid for daytime period)"
+      "ows_abstract"      "MeteoSwiss pictogram number, daily value (valid for daytime period) (Graphics)"
+      "ows_srs"           "EPSG:4326 EPSG:2056 EPSG:3857"
+      "gml_include_items" "all"
+      "gml_featureid"     "gid"
+      "oga_title"         "MeteoSwiss - MeteoSwiss pictogram number, daily value (valid for daytime period)"
+      "oga_description"   "MeteoSwiss pictogram number, daily value (valid for daytime period) (Graphics)"
+    END
+    PROJECTION
+      "init=epsg:4326"
+    END
+    CLASS
+      NAME "jp2000d0"
+      STYLE
+        SYMBOL "circle"
+        SIZE 6
+        COLOR 50 100 200
+        OUTLINECOLOR 20 50 120
+        WIDTH 1
+      END
+    END
+  END
+
+  # ── MeteoSwiss: nprolohs ──
+  LAYER
+    NAME "meteoswiss-nprolohs"
+    STATUS ON
+    TYPE POINT
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=postgis dbname=geodata user=geo password=geo port=5432"
+    DATA "geom FROM geojson_meteoswiss_nprolohs USING UNIQUE gid USING SRID=4326"
+    TEMPLATE "void"
+    METADATA
+      "ows_title"         "MeteoSwiss - Low cloud cover"
+      "ows_abstract"      "Low cloud cover (Clouds)"
+      "ows_srs"           "EPSG:4326 EPSG:2056 EPSG:3857"
+      "gml_include_items" "all"
+      "gml_featureid"     "gid"
+      "oga_title"         "MeteoSwiss - Low cloud cover"
+      "oga_description"   "Low cloud cover (Clouds)"
+    END
+    PROJECTION
+      "init=epsg:4326"
+    END
+    CLASS
+      NAME "nprolohs"
+      STYLE
+        SYMBOL "circle"
+        SIZE 6
+        COLOR 50 100 200
+        OUTLINECOLOR 20 50 120
+        WIDTH 1
+      END
+    END
+  END
+
+  # ── MeteoSwiss: npromths ──
+  LAYER
+    NAME "meteoswiss-npromths"
+    STATUS ON
+    TYPE POINT
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=postgis dbname=geodata user=geo password=geo port=5432"
+    DATA "geom FROM geojson_meteoswiss_npromths USING UNIQUE gid USING SRID=4326"
+    TEMPLATE "void"
+    METADATA
+      "ows_title"         "MeteoSwiss - Medium cloud cover"
+      "ows_abstract"      "Medium cloud cover (Clouds)"
+      "ows_srs"           "EPSG:4326 EPSG:2056 EPSG:3857"
+      "gml_include_items" "all"
+      "gml_featureid"     "gid"
+      "oga_title"         "MeteoSwiss - Medium cloud cover"
+      "oga_description"   "Medium cloud cover (Clouds)"
+    END
+    PROJECTION
+      "init=epsg:4326"
+    END
+    CLASS
+      NAME "npromths"
+      STYLE
+        SYMBOL "circle"
+        SIZE 6
+        COLOR 50 100 200
+        OUTLINECOLOR 20 50 120
+        WIDTH 1
+      END
+    END
+  END
+
+  # ── MeteoSwiss: nprohihs ──
+  LAYER
+    NAME "meteoswiss-nprohihs"
+    STATUS ON
+    TYPE POINT
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=postgis dbname=geodata user=geo password=geo port=5432"
+    DATA "geom FROM geojson_meteoswiss_nprohihs USING UNIQUE gid USING SRID=4326"
+    TEMPLATE "void"
+    METADATA
+      "ows_title"         "MeteoSwiss - High cloud cover"
+      "ows_abstract"      "High cloud cover (Clouds)"
+      "ows_srs"           "EPSG:4326 EPSG:2056 EPSG:3857"
+      "gml_include_items" "all"
+      "gml_featureid"     "gid"
+      "oga_title"         "MeteoSwiss - High cloud cover"
+      "oga_description"   "High cloud cover (Clouds)"
+    END
+    PROJECTION
+      "init=epsg:4326"
+    END
+    CLASS
+      NAME "nprohihs"
+      STYLE
+        SYMBOL "circle"
+        SIZE 6
+        COLOR 50 100 200
+        OUTLINECOLOR 20 50 120
+        WIDTH 1
+      END
+    END
+  END
+
+  # ── MeteoSwiss: fu3q10h0 ──
+  LAYER
+    NAME "meteoswiss-fu3q10h0"
+    STATUS ON
+    TYPE POINT
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=postgis dbname=geodata user=geo password=geo port=5432"
+    DATA "geom FROM geojson_meteoswiss_fu3q10h0 USING UNIQUE gid USING SRID=4326"
+    TEMPLATE "void"
+    METADATA
+      "ows_title"         "MeteoSwiss - Wind speed; hourly mean, 10% quantile in km/h"
+      "ows_abstract"      "Wind speed; hourly mean, 10% quantile in km/h (Wind)"
+      "ows_srs"           "EPSG:4326 EPSG:2056 EPSG:3857"
+      "gml_include_items" "all"
+      "gml_featureid"     "gid"
+      "oga_title"         "MeteoSwiss - Wind speed; hourly mean, 10% quantile in km/h"
+      "oga_description"   "Wind speed; hourly mean, 10% quantile in km/h (Wind)"
+    END
+    PROJECTION
+      "init=epsg:4326"
+    END
+    CLASS
+      NAME "fu3q10h0"
+      STYLE
+        SYMBOL "circle"
+        SIZE 6
+        COLOR 50 100 200
+        OUTLINECOLOR 20 50 120
+        WIDTH 1
+      END
+    END
+  END
+
+  # ── MeteoSwiss: fu3q10h1 ──
+  LAYER
+    NAME "meteoswiss-fu3q10h1"
+    STATUS ON
+    TYPE POINT
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=postgis dbname=geodata user=geo password=geo port=5432"
+    DATA "geom FROM geojson_meteoswiss_fu3q10h1 USING UNIQUE gid USING SRID=4326"
+    TEMPLATE "void"
+    METADATA
+      "ows_title"         "MeteoSwiss - Gust peak; hourly maximum, 10% quantile in km/h"
+      "ows_abstract"      "Gust peak; hourly maximum, 10% quantile in km/h (Wind)"
+      "ows_srs"           "EPSG:4326 EPSG:2056 EPSG:3857"
+      "gml_include_items" "all"
+      "gml_featureid"     "gid"
+      "oga_title"         "MeteoSwiss - Gust peak; hourly maximum, 10% quantile in km/h"
+      "oga_description"   "Gust peak; hourly maximum, 10% quantile in km/h (Wind)"
+    END
+    PROJECTION
+      "init=epsg:4326"
+    END
+    CLASS
+      NAME "fu3q10h1"
+      STYLE
+        SYMBOL "circle"
+        SIZE 6
+        COLOR 50 100 200
+        OUTLINECOLOR 20 50 120
+        WIDTH 1
+      END
+    END
+  END
+
+  # ── MeteoSwiss: fu3q90h0 ──
+  LAYER
+    NAME "meteoswiss-fu3q90h0"
+    STATUS ON
+    TYPE POINT
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=postgis dbname=geodata user=geo password=geo port=5432"
+    DATA "geom FROM geojson_meteoswiss_fu3q90h0 USING UNIQUE gid USING SRID=4326"
+    TEMPLATE "void"
+    METADATA
+      "ows_title"         "MeteoSwiss - Wind speed; hourly mean, 90% quantile in km/h"
+      "ows_abstract"      "Wind speed; hourly mean, 90% quantile in km/h (Wind)"
+      "ows_srs"           "EPSG:4326 EPSG:2056 EPSG:3857"
+      "gml_include_items" "all"
+      "gml_featureid"     "gid"
+      "oga_title"         "MeteoSwiss - Wind speed; hourly mean, 90% quantile in km/h"
+      "oga_description"   "Wind speed; hourly mean, 90% quantile in km/h (Wind)"
+    END
+    PROJECTION
+      "init=epsg:4326"
+    END
+    CLASS
+      NAME "fu3q90h0"
+      STYLE
+        SYMBOL "circle"
+        SIZE 6
+        COLOR 50 100 200
+        OUTLINECOLOR 20 50 120
+        WIDTH 1
+      END
+    END
+  END
+
+  # ── MeteoSwiss: fu3q90h1 ──
+  LAYER
+    NAME "meteoswiss-fu3q90h1"
+    STATUS ON
+    TYPE POINT
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=postgis dbname=geodata user=geo password=geo port=5432"
+    DATA "geom FROM geojson_meteoswiss_fu3q90h1 USING UNIQUE gid USING SRID=4326"
+    TEMPLATE "void"
+    METADATA
+      "ows_title"         "MeteoSwiss - Gust peak; hourly maximum, 90% quantile in km/h"
+      "ows_abstract"      "Gust peak; hourly maximum, 90% quantile in km/h (Wind)"
+      "ows_srs"           "EPSG:4326 EPSG:2056 EPSG:3857"
+      "gml_include_items" "all"
+      "gml_featureid"     "gid"
+      "oga_title"         "MeteoSwiss - Gust peak; hourly maximum, 90% quantile in km/h"
+      "oga_description"   "Gust peak; hourly maximum, 90% quantile in km/h (Wind)"
+    END
+    PROJECTION
+      "init=epsg:4326"
+    END
+    CLASS
+      NAME "fu3q90h1"
+      STYLE
+        SYMBOL "circle"
+        SIZE 6
+        COLOR 50 100 200
+        OUTLINECOLOR 20 50 120
+        WIDTH 1
+      END
+    END
+  END
+
+  # ── MeteoSwiss: rka150p0 ──
+  LAYER
+    NAME "meteoswiss-rka150p0"
+    STATUS ON
+    TYPE POINT
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=postgis dbname=geodata user=geo password=geo port=5432"
+    DATA "geom FROM geojson_meteoswiss_rka150p0 USING UNIQUE gid USING SRID=4326"
+    TEMPLATE "void"
+    METADATA
+      "ows_title"         "MeteoSwiss - Precipitation; daily total 00:00 - 24:00 local time"
+      "ows_abstract"      "Precipitation; daily total 00:00 - 24:00 local time (Precipitation)"
+      "ows_srs"           "EPSG:4326 EPSG:2056 EPSG:3857"
+      "gml_include_items" "all"
+      "gml_featureid"     "gid"
+      "oga_title"         "MeteoSwiss - Precipitation; daily total 00:00 - 24:00 local time"
+      "oga_description"   "Precipitation; daily total 00:00 - 24:00 local time (Precipitation)"
+    END
+    PROJECTION
+      "init=epsg:4326"
+    END
+    CLASS
+      NAME "rka150p0"
+      STYLE
+        SYMBOL "circle"
+        SIZE 6
+        COLOR 50 100 200
+        OUTLINECOLOR 20 50 120
+        WIDTH 1
+      END
+    END
+  END
+
+  # ── MeteoSwiss: rp0003i0 ──
+  LAYER
+    NAME "meteoswiss-rp0003i0"
+    STATUS ON
+    TYPE POINT
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=postgis dbname=geodata user=geo password=geo port=5432"
+    DATA "geom FROM geojson_meteoswiss_rp0003i0 USING UNIQUE gid USING SRID=4326"
+    TEMPLATE "void"
+    METADATA
+      "ows_title"         "MeteoSwiss - Probability of precipitation during 3 hours"
+      "ows_abstract"      "Probability of precipitation during 3 hours (Precipitation)"
+      "ows_srs"           "EPSG:4326 EPSG:2056 EPSG:3857"
+      "gml_include_items" "all"
+      "gml_featureid"     "gid"
+      "oga_title"         "MeteoSwiss - Probability of precipitation during 3 hours"
+      "oga_description"   "Probability of precipitation during 3 hours (Precipitation)"
+    END
+    PROJECTION
+      "init=epsg:4326"
+    END
+    CLASS
+      NAME "rp0003i0"
+      STYLE
+        SYMBOL "circle"
+        SIZE 6
+        COLOR 50 100 200
+        OUTLINECOLOR 20 50 120
+        WIDTH 1
+      END
+    END
+  END
+
+  # ── MeteoSwiss: rreq10h0 ──
+  LAYER
+    NAME "meteoswiss-rreq10h0"
+    STATUS ON
+    TYPE POINT
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=postgis dbname=geodata user=geo password=geo port=5432"
+    DATA "geom FROM geojson_meteoswiss_rreq10h0 USING UNIQUE gid USING SRID=4326"
+    TEMPLATE "void"
+    METADATA
+      "ows_title"         "MeteoSwiss - Precipitation; hourly total, 10% quantile"
+      "ows_abstract"      "Precipitation; hourly total, 10% quantile (Precipitation)"
+      "ows_srs"           "EPSG:4326 EPSG:2056 EPSG:3857"
+      "gml_include_items" "all"
+      "gml_featureid"     "gid"
+      "oga_title"         "MeteoSwiss - Precipitation; hourly total, 10% quantile"
+      "oga_description"   "Precipitation; hourly total, 10% quantile (Precipitation)"
+    END
+    PROJECTION
+      "init=epsg:4326"
+    END
+    CLASS
+      NAME "rreq10h0"
+      STYLE
+        SYMBOL "circle"
+        SIZE 6
+        COLOR 50 100 200
+        OUTLINECOLOR 20 50 120
+        WIDTH 1
+      END
+    END
+  END
+
+  # ── MeteoSwiss: rreq10p0 ──
+  LAYER
+    NAME "meteoswiss-rreq10p0"
+    STATUS ON
+    TYPE POINT
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=postgis dbname=geodata user=geo password=geo port=5432"
+    DATA "geom FROM geojson_meteoswiss_rreq10p0 USING UNIQUE gid USING SRID=4326"
+    TEMPLATE "void"
+    METADATA
+      "ows_title"         "MeteoSwiss - Precipitation; daily total 00:00 - 24:00 local time, 10% quantile"
+      "ows_abstract"      "Precipitation; daily total 00:00 - 24:00 local time, 10% quantile (Precipitation)"
+      "ows_srs"           "EPSG:4326 EPSG:2056 EPSG:3857"
+      "gml_include_items" "all"
+      "gml_featureid"     "gid"
+      "oga_title"         "MeteoSwiss - Precipitation; daily total 00:00 - 24:00 local time, 10% quantile"
+      "oga_description"   "Precipitation; daily total 00:00 - 24:00 local time, 10% quantile (Precipitation)"
+    END
+    PROJECTION
+      "init=epsg:4326"
+    END
+    CLASS
+      NAME "rreq10p0"
+      STYLE
+        SYMBOL "circle"
+        SIZE 6
+        COLOR 50 100 200
+        OUTLINECOLOR 20 50 120
+        WIDTH 1
+      END
+    END
+  END
+
+  # ── MeteoSwiss: rreq90h0 ──
+  LAYER
+    NAME "meteoswiss-rreq90h0"
+    STATUS ON
+    TYPE POINT
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=postgis dbname=geodata user=geo password=geo port=5432"
+    DATA "geom FROM geojson_meteoswiss_rreq90h0 USING UNIQUE gid USING SRID=4326"
+    TEMPLATE "void"
+    METADATA
+      "ows_title"         "MeteoSwiss - Precipitation; hourly total, 90% quantile"
+      "ows_abstract"      "Precipitation; hourly total, 90% quantile (Precipitation)"
+      "ows_srs"           "EPSG:4326 EPSG:2056 EPSG:3857"
+      "gml_include_items" "all"
+      "gml_featureid"     "gid"
+      "oga_title"         "MeteoSwiss - Precipitation; hourly total, 90% quantile"
+      "oga_description"   "Precipitation; hourly total, 90% quantile (Precipitation)"
+    END
+    PROJECTION
+      "init=epsg:4326"
+    END
+    CLASS
+      NAME "rreq90h0"
+      STYLE
+        SYMBOL "circle"
+        SIZE 6
+        COLOR 50 100 200
+        OUTLINECOLOR 20 50 120
+        WIDTH 1
+      END
+    END
+  END
+
+  # ── MeteoSwiss: rreq90p0 ──
+  LAYER
+    NAME "meteoswiss-rreq90p0"
+    STATUS ON
+    TYPE POINT
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=postgis dbname=geodata user=geo password=geo port=5432"
+    DATA "geom FROM geojson_meteoswiss_rreq90p0 USING UNIQUE gid USING SRID=4326"
+    TEMPLATE "void"
+    METADATA
+      "ows_title"         "MeteoSwiss - Precipitation; daily total 00:00 - 24:00 local time, 90% quantile"
+      "ows_abstract"      "Precipitation; daily total 00:00 - 24:00 local time, 90% quantile (Precipitation)"
+      "ows_srs"           "EPSG:4326 EPSG:2056 EPSG:3857"
+      "gml_include_items" "all"
+      "gml_featureid"     "gid"
+      "oga_title"         "MeteoSwiss - Precipitation; daily total 00:00 - 24:00 local time, 90% quantile"
+      "oga_description"   "Precipitation; daily total 00:00 - 24:00 local time, 90% quantile (Precipitation)"
+    END
+    PROJECTION
+      "init=epsg:4326"
+    END
+    CLASS
+      NAME "rreq90p0"
+      STYLE
+        SYMBOL "circle"
+        SIZE 6
+        COLOR 50 100 200
+        OUTLINECOLOR 20 50 120
+        WIDTH 1
+      END
+    END
+  END
+
+  # ── MeteoSwiss: tre200pn ──
+  LAYER
+    NAME "meteoswiss-tre200pn"
+    STATUS ON
+    TYPE POINT
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=postgis dbname=geodata user=geo password=geo port=5432"
+    DATA "geom FROM geojson_meteoswiss_tre200pn USING UNIQUE gid USING SRID=4326"
+    TEMPLATE "void"
+    METADATA
+      "ows_title"         "MeteoSwiss - Air temperature 2 m above ground; daily minimum 00:00 - 24:00 local time"
+      "ows_abstract"      "Air temperature 2 m above ground; daily minimum 00:00 - 24:00 local time (Temperature)"
+      "ows_srs"           "EPSG:4326 EPSG:2056 EPSG:3857"
+      "gml_include_items" "all"
+      "gml_featureid"     "gid"
+      "oga_title"         "MeteoSwiss - Air temperature 2 m above ground; daily minimum 00:00 - 24:00 local time"
+      "oga_description"   "Air temperature 2 m above ground; daily minimum 00:00 - 24:00 local time (Temperature)"
+    END
+    PROJECTION
+      "init=epsg:4326"
+    END
+    CLASS
+      NAME "tre200pn"
+      STYLE
+        SYMBOL "circle"
+        SIZE 6
+        COLOR 50 100 200
+        OUTLINECOLOR 20 50 120
+        WIDTH 1
+      END
+    END
+  END
+
+  # ── MeteoSwiss: tre200px ──
+  LAYER
+    NAME "meteoswiss-tre200px"
+    STATUS ON
+    TYPE POINT
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=postgis dbname=geodata user=geo password=geo port=5432"
+    DATA "geom FROM geojson_meteoswiss_tre200px USING UNIQUE gid USING SRID=4326"
+    TEMPLATE "void"
+    METADATA
+      "ows_title"         "MeteoSwiss - Air temperature 2 m above ground; daily maximum 00:00 - 24:00 local time"
+      "ows_abstract"      "Air temperature 2 m above ground; daily maximum 00:00 - 24:00 local time (Temperature)"
+      "ows_srs"           "EPSG:4326 EPSG:2056 EPSG:3857"
+      "gml_include_items" "all"
+      "gml_featureid"     "gid"
+      "oga_title"         "MeteoSwiss - Air temperature 2 m above ground; daily maximum 00:00 - 24:00 local time"
+      "oga_description"   "Air temperature 2 m above ground; daily maximum 00:00 - 24:00 local time (Temperature)"
+    END
+    PROJECTION
+      "init=epsg:4326"
+    END
+    CLASS
+      NAME "tre200px"
+      STYLE
+        SYMBOL "circle"
+        SIZE 6
+        COLOR 50 100 200
+        OUTLINECOLOR 20 50 120
+        WIDTH 1
+      END
+    END
+  END
+
+  # ── MeteoSwiss: treq10h0 ──
+  LAYER
+    NAME "meteoswiss-treq10h0"
+    STATUS ON
+    TYPE POINT
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=postgis dbname=geodata user=geo password=geo port=5432"
+    DATA "geom FROM geojson_meteoswiss_treq10h0 USING UNIQUE gid USING SRID=4326"
+    TEMPLATE "void"
+    METADATA
+      "ows_title"         "MeteoSwiss - Air temperature 2 m above ground; hourly mean, 10% quantile"
+      "ows_abstract"      "Air temperature 2 m above ground; hourly mean, 10% quantile (Temperature)"
+      "ows_srs"           "EPSG:4326 EPSG:2056 EPSG:3857"
+      "gml_include_items" "all"
+      "gml_featureid"     "gid"
+      "oga_title"         "MeteoSwiss - Air temperature 2 m above ground; hourly mean, 10% quantile"
+      "oga_description"   "Air temperature 2 m above ground; hourly mean, 10% quantile (Temperature)"
+    END
+    PROJECTION
+      "init=epsg:4326"
+    END
+    CLASS
+      NAME "treq10h0"
+      STYLE
+        SYMBOL "circle"
+        SIZE 6
+        COLOR 50 100 200
+        OUTLINECOLOR 20 50 120
+        WIDTH 1
+      END
+    END
+  END
+
+  # ── MeteoSwiss: treq90h0 ──
+  LAYER
+    NAME "meteoswiss-treq90h0"
+    STATUS ON
+    TYPE POINT
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=postgis dbname=geodata user=geo password=geo port=5432"
+    DATA "geom FROM geojson_meteoswiss_treq90h0 USING UNIQUE gid USING SRID=4326"
+    TEMPLATE "void"
+    METADATA
+      "ows_title"         "MeteoSwiss - Air temperature 2 m above ground; hourly mean, 90% quantile"
+      "ows_abstract"      "Air temperature 2 m above ground; hourly mean, 90% quantile (Temperature)"
+      "ows_srs"           "EPSG:4326 EPSG:2056 EPSG:3857"
+      "gml_include_items" "all"
+      "gml_featureid"     "gid"
+      "oga_title"         "MeteoSwiss - Air temperature 2 m above ground; hourly mean, 90% quantile"
+      "oga_description"   "Air temperature 2 m above ground; hourly mean, 90% quantile (Temperature)"
+    END
+    PROJECTION
+      "init=epsg:4326"
+    END
+    CLASS
+      NAME "treq90h0"
+      STYLE
+        SYMBOL "circle"
+        SIZE 6
+        COLOR 50 100 200
+        OUTLINECOLOR 20 50 120
+        WIDTH 1
+      END
+    END
+  END
+
 END

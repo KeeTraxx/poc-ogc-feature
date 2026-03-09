@@ -17,6 +17,7 @@ import sys
 from pathlib import Path
 
 import psycopg2
+import psycopg2.extras
 import requests
 from pyproj import Transformer
 
@@ -52,6 +53,8 @@ def _sql_type(value):
         return "INTEGER"
     if isinstance(value, float):
         return "DOUBLE PRECISION"
+    if isinstance(value, (dict, list)):
+        return "JSONB"
     return "TEXT"
 
 
@@ -126,15 +129,21 @@ def _safe_table(name: str) -> str:
     return "geojson_" + name.replace("-", "_")
 
 
-def load_postgis(name: str, features: list[dict], srid: int = 4326) -> int:
-    """Load features into PostGIS with flat columns. Returns row count."""
+def load_postgis(name: str, features: list[dict], srid: int = 4326) -> tuple[int, bool]:
+    """Load features into PostGIS with flat columns. Returns (row_count, skipped)."""
     table = _safe_table(name)
     columns = _infer_columns(features)
 
     conn = pg_connect()
     try:
         with conn.cursor() as cur:
-            cur.execute(f"DROP TABLE IF EXISTS {table} CASCADE")
+            cur.execute(
+                "SELECT to_regclass(%s) IS NOT NULL",
+                (f"public.{table}",),
+            )
+            if cur.fetchone()[0]:
+                cur.execute(f"SELECT count(*) FROM {table}")
+                return cur.fetchone()[0], True
 
             col_defs = ",\n                    ".join(
                 f'"{col}" {sql_type}' for col, sql_type in columns
@@ -158,7 +167,10 @@ def load_postgis(name: str, features: list[dict], srid: int = 4326) -> int:
 
             for feat in features:
                 props = feat.get("properties", {})
-                values = [props.get(col) for col, _ in columns]
+                values = [
+                    psycopg2.extras.Json(v) if isinstance(v, (dict, list)) else v
+                    for v in (props.get(col) for col, _ in columns)
+                ]
                 values.append(json.dumps(feat["geometry"]))
                 cur.execute(insert_sql, values)
 
@@ -168,7 +180,7 @@ def load_postgis(name: str, features: list[dict], srid: int = 4326) -> int:
             conn.commit()
 
             cur.execute(f"SELECT count(*) FROM {table}")
-            return cur.fetchone()[0]
+            return cur.fetchone()[0], False
     finally:
         conn.close()
 
@@ -210,6 +222,10 @@ def infer_mapping(properties: dict) -> dict:
             field_defs[k] = {"type": "float"}
         elif isinstance(v, str):
             field_defs[k] = {"type": "text", "fields": {"raw": {"type": "keyword"}}}
+        elif isinstance(v, dict):
+            field_defs[k] = {"type": "object", "dynamic": True}
+        elif isinstance(v, list):
+            field_defs[k] = {"type": "object", "dynamic": True, "enabled": False}
         else:
             field_defs[k] = {"type": "keyword"}
     return {
@@ -224,21 +240,25 @@ def infer_mapping(properties: dict) -> dict:
     }
 
 
-def load_opensearch(name: str, features: list[dict]) -> tuple[int, int]:
+def load_opensearch(name: str, features: list[dict]) -> tuple[int, int, bool]:
     """Load features into OpenSearch index `geojson-{name}`.
 
-    Returns (indexed_count, error_count).
+    Returns (indexed_count, error_count, skipped).
     """
     index = f"geojson-{name}"
 
     if not features:
-        return 0, 0
+        return 0, 0, False
+
+    # Skip if index already exists
+    resp = requests.head(f"{OS_URL}/{index}", timeout=10)
+    if resp.status_code == 200:
+        count_resp = requests.get(f"{OS_URL}/{index}/_count", timeout=10)
+        return count_resp.json().get("count", 0), 0, True
 
     for feat in features:
         feat["geometry"] = _dedup_coords(feat["geometry"])
 
-    # Recreate index
-    requests.delete(f"{OS_URL}/{index}", timeout=10)
     resp = requests.put(
         f"{OS_URL}/{index}",
         json=infer_mapping(features[0].get("properties", {})),
@@ -246,36 +266,39 @@ def load_opensearch(name: str, features: list[dict]) -> tuple[int, int]:
     )
     resp.raise_for_status()
 
-    # Bulk index
-    bulk_lines = []
-    for i, feat in enumerate(features, start=1):
-        bulk_lines.append(json.dumps({"index": {"_index": index, "_id": str(i)}}))
-        bulk_lines.append(json.dumps({
-            "id": i,
-            "type": "Feature",
-            "properties": feat.get("properties", {}),
-            "geometry": feat.get("geometry"),
-        }))
-    bulk_body = "\n".join(bulk_lines) + "\n"
-
-    resp = requests.post(
-        f"{OS_URL}/_bulk",
-        headers={"Content-Type": "application/x-ndjson"},
-        data=bulk_body,
-        timeout=120,
-    )
-    resp.raise_for_status()
-
-    bulk_result = resp.json()
+    # Bulk index in batches to avoid 429 Too Many Requests
+    BATCH_SIZE = 500
     errors = 0
-    if bulk_result.get("errors"):
-        for item in bulk_result.get("items", []):
-            if item.get("index", {}).get("error"):
-                errors += 1
+    for batch_start in range(0, len(features), BATCH_SIZE):
+        batch = features[batch_start:batch_start + BATCH_SIZE]
+        bulk_lines = []
+        for i, feat in enumerate(batch, start=batch_start + 1):
+            bulk_lines.append(json.dumps({"index": {"_index": index, "_id": str(i)}}))
+            bulk_lines.append(json.dumps({
+                "id": i,
+                "type": "Feature",
+                "properties": feat.get("properties", {}),
+                "geometry": feat.get("geometry"),
+            }))
+        bulk_body = "\n".join(bulk_lines) + "\n"
+
+        resp = requests.post(
+            f"{OS_URL}/_bulk",
+            headers={"Content-Type": "application/x-ndjson"},
+            data=bulk_body,
+            timeout=120,
+        )
+        resp.raise_for_status()
+
+        bulk_result = resp.json()
+        if bulk_result.get("errors"):
+            for item in bulk_result.get("items", []):
+                if item.get("index", {}).get("error"):
+                    errors += 1
 
     requests.post(f"{OS_URL}/{index}/_refresh", timeout=10)
     count_resp = requests.get(f"{OS_URL}/{index}/_count", timeout=10)
-    return count_resp.json().get("count", 0), errors
+    return count_resp.json().get("count", 0), errors, False
 
 
 def main():
@@ -307,14 +330,16 @@ def main():
 
         # PostGIS (WGS84)
         print(f"  {name} -> PostGIS ({table}) ... ", end="", flush=True)
-        count = load_postgis(name, features)
-        print(f"{count} features")
+        count, skipped = load_postgis(name, features)
+        print(f"{count} features" + (" (already exists, skipped)" if skipped else ""))
 
         # OpenSearch (WGS84)
         print(f"  {name} -> OpenSearch (geojson-{name}) ... ", end="", flush=True)
-        indexed, errors = load_opensearch(name, features)
+        indexed, errors, os_skipped = load_opensearch(name, features)
         msg = f"{indexed} features"
-        if errors:
+        if os_skipped:
+            msg += " (already exists, skipped)"
+        elif errors:
             msg += f" ({errors} skipped - invalid geometry)"
         print(msg)
 
@@ -323,8 +348,8 @@ def main():
         lv95_table = _safe_table(lv95_name)
         print(f"  {name} -> PostGIS LV95 ({lv95_table}) ... ", end="", flush=True)
         lv95_features = _reproject_features(features)
-        lv95_count = load_postgis(lv95_name, lv95_features, srid=2056)
-        print(f"{lv95_count} features")
+        lv95_count, lv95_skipped = load_postgis(lv95_name, lv95_features, srid=2056)
+        print(f"{lv95_count} features" + (" (already exists, skipped)" if lv95_skipped else ""))
 
         print()
 

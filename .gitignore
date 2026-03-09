@@ -1,1 +1,5 @@
 .env
+meteoswiss/data
+data/meteoswiss-*
+__pycache__
+pgadmin-pgpass
