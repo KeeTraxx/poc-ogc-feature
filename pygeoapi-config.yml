@@ -71,6 +71,11 @@ resources:
         title_field: KTKZ
         table: geojson_cantons
         geom_field: geom
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
 
   country-postgis:
     type: collection
@@ -101,6 +106,11 @@ resources:
         title_field: name
         table: geojson_country
         geom_field: geom
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
 
   districts-postgis:
     type: collection
@@ -131,6 +141,11 @@ resources:
         title_field: BEZNAME
         table: geojson_districts
         geom_field: geom
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
 
   lakes-postgis:
     type: collection
@@ -161,6 +176,11 @@ resources:
         title_field: name
         table: geojson_lakes
         geom_field: geom
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
 
   municipalities-postgis:
     type: collection
@@ -191,6 +211,11 @@ resources:
         title_field: GDENAME
         table: geojson_municipalities
         geom_field: geom
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
 
   swiss-places-geojson-postgis:
     type: collection
@@ -221,6 +246,11 @@ resources:
         title_field: name
         table: geojson_swiss_places
         geom_field: geom
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
 
   # ── GeoJSON data: PostGIS LV95 (EPSG:2056) collections ──
 
@@ -464,6 +494,11 @@ resources:
         open_search: true
         id_field: id
         title_field: KTKZ
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
 
   country-opensearch:
     type: collection
@@ -487,6 +522,11 @@ resources:
         open_search: true
         id_field: id
         title_field: properties.name
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
 
   districts-opensearch:
     type: collection
@@ -510,6 +550,11 @@ resources:
         open_search: true
         id_field: id
         title_field: properties.BEZNAME
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
 
   lakes-opensearch:
     type: collection
@@ -533,6 +578,11 @@ resources:
         open_search: true
         id_field: id
         title_field: SEENAME
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
 
   municipalities-opensearch:
     type: collection
@@ -556,6 +606,11 @@ resources:
         open_search: true
         id_field: id
         title_field: properties.GDENAME
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
 
   # ── MeteoSwiss Forecast Collections ──
   meteoswiss-tre200dx:
@@ -592,6 +647,12 @@ resources:
         title_field: name
         table: geojson_meteoswiss_tre200dx
         geom_field: geom
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
+
   meteoswiss-tre200dn:
     type: collection
     title: "MeteoSwiss - Air temperature 2 m above ground; daily minimum (°C)"
@@ -626,6 +687,12 @@ resources:
         title_field: name
         table: geojson_meteoswiss_tre200dn
         geom_field: geom
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
+
   meteoswiss-rka150d0:
     type: collection
     title: "MeteoSwiss - Precipitation; daily total 0 UTC - 0 UTC (mm)"
@@ -660,6 +727,12 @@ resources:
         title_field: name
         table: geojson_meteoswiss_rka150d0
         geom_field: geom
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
+
   meteoswiss-tre200h0:
     type: collection
     title: "MeteoSwiss - Air temperature 2 m above ground; hourly mean (°C)"
@@ -694,6 +767,12 @@ resources:
         title_field: name
         table: geojson_meteoswiss_tre200h0
         geom_field: geom
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
+
   meteoswiss-rre150h0:
     type: collection
     title: "MeteoSwiss - Precipitation; hourly total (mm)"
@@ -728,6 +807,12 @@ resources:
         title_field: name
         table: geojson_meteoswiss_rre150h0
         geom_field: geom
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
+
   meteoswiss-gre000h0:
     type: collection
     title: "MeteoSwiss - Global radiation; hourly mean (W/m²)"
@@ -762,6 +847,12 @@ resources:
         title_field: name
         table: geojson_meteoswiss_gre000h0
         geom_field: geom
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
+
   meteoswiss-sre000h0:
     type: collection
     title: "MeteoSwiss - Sunshine duration; hourly total (min)"
@@ -796,6 +887,12 @@ resources:
         title_field: name
         table: geojson_meteoswiss_sre000h0
         geom_field: geom
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
+
   meteoswiss-dkl010h0:
     type: collection
     title: "MeteoSwiss - Wind direction; hourly mean (°)"
@@ -830,6 +927,12 @@ resources:
         title_field: name
         table: geojson_meteoswiss_dkl010h0
         geom_field: geom
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
+
   meteoswiss-fu3010h0:
     type: collection
     title: "MeteoSwiss - Wind speed scalar; hourly mean in km/h (km/h)"
@@ -864,6 +967,12 @@ resources:
         title_field: name
         table: geojson_meteoswiss_fu3010h0
         geom_field: geom
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
+
   meteoswiss-fu3010h1:
     type: collection
     title: "MeteoSwiss - Gust peak (one second); hourly maximum in km/h (km/h)"
@@ -898,6 +1007,12 @@ resources:
         title_field: name
         table: geojson_meteoswiss_fu3010h1
         geom_field: geom
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
+
   meteoswiss-zprfr0hs:
     type: collection
     title: "MeteoSwiss - Zero degree level; hourly value, forecast (m)"
@@ -932,6 +1047,12 @@ resources:
         title_field: name
         table: geojson_meteoswiss_zprfr0hs
         geom_field: geom
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
+
   meteoswiss-rre003i0:
     type: collection
     title: "MeteoSwiss - Total precipitation during 3 hours (mm)"
@@ -966,6 +1087,12 @@ resources:
         title_field: name
         table: geojson_meteoswiss_rre003i0
         geom_field: geom
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
+
   meteoswiss-ods000h0:
     type: collection
     title: "MeteoSwiss - Diffuse radiation; hourly mean (W/m²)"
@@ -1000,6 +1127,12 @@ resources:
         title_field: name
         table: geojson_meteoswiss_ods000h0
         geom_field: geom
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
+
   meteoswiss-jww003i0:
     type: collection
     title: "MeteoSwiss - MeteoSwiss-Icon, weathertype, preceding 3 hours, forecast (Code)"
@@ -1034,6 +1167,12 @@ resources:
         title_field: name
         table: geojson_meteoswiss_jww003i0
         geom_field: geom
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
+
   meteoswiss-jp2000d0:
     type: collection
     title: "MeteoSwiss - MeteoSwiss pictogram number, daily value (valid for daytime period) (Code)"
@@ -1068,6 +1207,12 @@ resources:
         title_field: name
         table: geojson_meteoswiss_jp2000d0
         geom_field: geom
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
+
   meteoswiss-nprolohs:
     type: collection
     title: "MeteoSwiss - Low cloud cover (-)"
@@ -1102,6 +1247,12 @@ resources:
         title_field: name
         table: geojson_meteoswiss_nprolohs
         geom_field: geom
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
+
   meteoswiss-npromths:
     type: collection
     title: "MeteoSwiss - Medium cloud cover (-)"
@@ -1136,6 +1287,12 @@ resources:
         title_field: name
         table: geojson_meteoswiss_npromths
         geom_field: geom
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
+
   meteoswiss-nprohihs:
     type: collection
     title: "MeteoSwiss - High cloud cover (-)"
@@ -1170,6 +1327,12 @@ resources:
         title_field: name
         table: geojson_meteoswiss_nprohihs
         geom_field: geom
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
+
   meteoswiss-fu3q10h0:
     type: collection
     title: "MeteoSwiss - Wind speed; hourly mean, 10% quantile in km/h (km/h)"
@@ -1204,6 +1367,12 @@ resources:
         title_field: name
         table: geojson_meteoswiss_fu3q10h0
         geom_field: geom
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
+
   meteoswiss-fu3q10h1:
     type: collection
     title: "MeteoSwiss - Gust peak; hourly maximum, 10% quantile in km/h (km/h)"
@@ -1238,6 +1407,12 @@ resources:
         title_field: name
         table: geojson_meteoswiss_fu3q10h1
         geom_field: geom
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
+
   meteoswiss-fu3q90h0:
     type: collection
     title: "MeteoSwiss - Wind speed; hourly mean, 90% quantile in km/h (km/h)"
@@ -1272,6 +1447,12 @@ resources:
         title_field: name
         table: geojson_meteoswiss_fu3q90h0
         geom_field: geom
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
+
   meteoswiss-fu3q90h1:
     type: collection
     title: "MeteoSwiss - Gust peak; hourly maximum, 90% quantile in km/h (km/h)"
@@ -1306,6 +1487,12 @@ resources:
         title_field: name
         table: geojson_meteoswiss_fu3q90h1
         geom_field: geom
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
+
   meteoswiss-rka150p0:
     type: collection
     title: "MeteoSwiss - Precipitation; daily total 00:00 - 24:00 local time (mm)"
@@ -1340,6 +1527,12 @@ resources:
         title_field: name
         table: geojson_meteoswiss_rka150p0
         geom_field: geom
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
+
   meteoswiss-rp0003i0:
     type: collection
     title: "MeteoSwiss - Probability of precipitation during 3 hours (%)"
@@ -1374,6 +1567,12 @@ resources:
         title_field: name
         table: geojson_meteoswiss_rp0003i0
         geom_field: geom
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
+
   meteoswiss-rreq10h0:
     type: collection
     title: "MeteoSwiss - Precipitation; hourly total, 10% quantile (mm)"
@@ -1408,6 +1607,12 @@ resources:
         title_field: name
         table: geojson_meteoswiss_rreq10h0
         geom_field: geom
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
+
   meteoswiss-rreq10p0:
     type: collection
     title: "MeteoSwiss - Precipitation; daily total 00:00 - 24:00 local time, 10% quantile (mm)"
@@ -1442,6 +1647,12 @@ resources:
         title_field: name
         table: geojson_meteoswiss_rreq10p0
         geom_field: geom
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
+
   meteoswiss-rreq90h0:
     type: collection
     title: "MeteoSwiss - Precipitation; hourly total, 90% quantile (mm)"
@@ -1476,6 +1687,12 @@ resources:
         title_field: name
         table: geojson_meteoswiss_rreq90h0
         geom_field: geom
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
+
   meteoswiss-rreq90p0:
     type: collection
     title: "MeteoSwiss - Precipitation; daily total 00:00 - 24:00 local time, 90% quantile (mm)"
@@ -1510,6 +1727,12 @@ resources:
         title_field: name
         table: geojson_meteoswiss_rreq90p0
         geom_field: geom
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
+
   meteoswiss-tre200pn:
     type: collection
     title: "MeteoSwiss - Air temperature 2 m above ground; daily minimum 00:00 - 24:00 local time (°C)"
@@ -1544,6 +1767,12 @@ resources:
         title_field: name
         table: geojson_meteoswiss_tre200pn
         geom_field: geom
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
+
   meteoswiss-tre200px:
     type: collection
     title: "MeteoSwiss - Air temperature 2 m above ground; daily maximum 00:00 - 24:00 local time (°C)"
@@ -1578,6 +1807,12 @@ resources:
         title_field: name
         table: geojson_meteoswiss_tre200px
         geom_field: geom
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
+
   meteoswiss-treq10h0:
     type: collection
     title: "MeteoSwiss - Air temperature 2 m above ground; hourly mean, 10% quantile (°C)"
@@ -1612,6 +1847,12 @@ resources:
         title_field: name
         table: geojson_meteoswiss_treq10h0
         geom_field: geom
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
+
   meteoswiss-treq90h0:
     type: collection
     title: "MeteoSwiss - Air temperature 2 m above ground; hourly mean, 90% quantile (°C)"
@@ -1646,6 +1887,11 @@ resources:
         title_field: name
         table: geojson_meteoswiss_treq90h0
         geom_field: geom
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
 
   # ── MeteoSwiss OpenSearch collections ──────────────────────────────────────
 
@@ -1675,6 +1921,11 @@ resources:
         open_search: true
         id_field: id
         title_field: properties.name
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
 
   meteoswiss-tre200dn-opensearch:
     type: collection
@@ -1702,6 +1953,11 @@ resources:
         open_search: true
         id_field: id
         title_field: properties.name
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
 
   meteoswiss-rka150d0-opensearch:
     type: collection
@@ -1729,6 +1985,11 @@ resources:
         open_search: true
         id_field: id
         title_field: properties.name
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
 
   meteoswiss-tre200h0-opensearch:
     type: collection
@@ -1756,6 +2017,11 @@ resources:
         open_search: true
         id_field: id
         title_field: properties.name
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
 
   meteoswiss-rre150h0-opensearch:
     type: collection
@@ -1783,6 +2049,11 @@ resources:
         open_search: true
         id_field: id
         title_field: properties.name
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
 
   meteoswiss-gre000h0-opensearch:
     type: collection
@@ -1810,6 +2081,11 @@ resources:
         open_search: true
         id_field: id
         title_field: properties.name
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
 
   meteoswiss-sre000h0-opensearch:
     type: collection
@@ -1837,6 +2113,11 @@ resources:
         open_search: true
         id_field: id
         title_field: properties.name
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
 
   meteoswiss-dkl010h0-opensearch:
     type: collection
@@ -1864,6 +2145,11 @@ resources:
         open_search: true
         id_field: id
         title_field: properties.name
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
 
   meteoswiss-fu3010h0-opensearch:
     type: collection
@@ -1891,6 +2177,11 @@ resources:
         open_search: true
         id_field: id
         title_field: properties.name
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
 
   meteoswiss-fu3010h1-opensearch:
     type: collection
@@ -1918,6 +2209,11 @@ resources:
         open_search: true
         id_field: id
         title_field: properties.name
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
 
   meteoswiss-zprfr0hs-opensearch:
     type: collection
@@ -1945,6 +2241,11 @@ resources:
         open_search: true
         id_field: id
         title_field: properties.name
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
 
   meteoswiss-rre003i0-opensearch:
     type: collection
@@ -1972,6 +2273,11 @@ resources:
         open_search: true
         id_field: id
         title_field: properties.name
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
 
   meteoswiss-ods000h0-opensearch:
     type: collection
@@ -1999,6 +2305,11 @@ resources:
         open_search: true
         id_field: id
         title_field: properties.name
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
 
   meteoswiss-jww003i0-opensearch:
     type: collection
@@ -2026,6 +2337,11 @@ resources:
         open_search: true
         id_field: id
         title_field: properties.name
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
 
   meteoswiss-jp2000d0-opensearch:
     type: collection
@@ -2053,6 +2369,11 @@ resources:
         open_search: true
         id_field: id
         title_field: properties.name
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
 
   meteoswiss-nprolohs-opensearch:
     type: collection
@@ -2080,6 +2401,11 @@ resources:
         open_search: true
         id_field: id
         title_field: properties.name
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
 
   meteoswiss-npromths-opensearch:
     type: collection
@@ -2107,6 +2433,11 @@ resources:
         open_search: true
         id_field: id
         title_field: properties.name
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
 
   meteoswiss-nprohihs-opensearch:
     type: collection
@@ -2134,6 +2465,11 @@ resources:
         open_search: true
         id_field: id
         title_field: properties.name
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
 
   meteoswiss-fu3q10h0-opensearch:
     type: collection
@@ -2161,6 +2497,11 @@ resources:
         open_search: true
         id_field: id
         title_field: properties.name
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
 
   meteoswiss-fu3q10h1-opensearch:
     type: collection
@@ -2188,6 +2529,11 @@ resources:
         open_search: true
         id_field: id
         title_field: properties.name
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
 
   meteoswiss-fu3q90h0-opensearch:
     type: collection
@@ -2215,6 +2561,11 @@ resources:
         open_search: true
         id_field: id
         title_field: properties.name
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
 
   meteoswiss-fu3q90h1-opensearch:
     type: collection
@@ -2242,6 +2593,11 @@ resources:
         open_search: true
         id_field: id
         title_field: properties.name
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
 
   meteoswiss-rka150p0-opensearch:
     type: collection
@@ -2269,6 +2625,11 @@ resources:
         open_search: true
         id_field: id
         title_field: properties.name
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
 
   meteoswiss-rp0003i0-opensearch:
     type: collection
@@ -2296,6 +2657,11 @@ resources:
         open_search: true
         id_field: id
         title_field: properties.name
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
 
   meteoswiss-rreq10h0-opensearch:
     type: collection
@@ -2323,6 +2689,11 @@ resources:
         open_search: true
         id_field: id
         title_field: properties.name
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
 
   meteoswiss-rreq10p0-opensearch:
     type: collection
@@ -2350,6 +2721,11 @@ resources:
         open_search: true
         id_field: id
         title_field: properties.name
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
 
   meteoswiss-rreq90h0-opensearch:
     type: collection
@@ -2377,6 +2753,11 @@ resources:
         open_search: true
         id_field: id
         title_field: properties.name
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
 
   meteoswiss-rreq90p0-opensearch:
     type: collection
@@ -2404,6 +2785,11 @@ resources:
         open_search: true
         id_field: id
         title_field: properties.name
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
 
   meteoswiss-tre200pn-opensearch:
     type: collection
@@ -2431,6 +2817,11 @@ resources:
         open_search: true
         id_field: id
         title_field: properties.name
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
 
   meteoswiss-tre200px-opensearch:
     type: collection
@@ -2458,6 +2849,11 @@ resources:
         open_search: true
         id_field: id
         title_field: properties.name
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
 
   meteoswiss-treq10h0-opensearch:
     type: collection
@@ -2485,6 +2881,11 @@ resources:
         open_search: true
         id_field: id
         title_field: properties.name
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
 
   meteoswiss-treq90h0-opensearch:
     type: collection
@@ -2512,3 +2913,8 @@ resources:
         open_search: true
         id_field: id
         title_field: properties.name
+        crs:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          - http://www.opengis.net/def/crs/EPSG/0/2056
+          - http://www.opengis.net/def/crs/EPSG/0/3857
