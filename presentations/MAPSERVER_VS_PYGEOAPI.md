@@ -263,6 +263,8 @@ Only pygeoapi supports nested JSON out of the box.
 
 MapServer will serve a String instead.
 
+But also: QGIS doesn't parse nested JSON correctly. Maybe we just want to avoid using nested JSON in our API?
+
 http://localhost:5000/collections/meteoswiss-rreq10h0/items?f=json
 
 http://localhost:8080/swiss-geodata/ogcapi/collections/meteoswiss-rreq10h0/items?f=json
