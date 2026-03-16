@@ -48,7 +48,7 @@ The **OGC API** is a family of standards for serving geospatial data over the we
 | **License**       | MIT-style (MIT/X)                          | MIT                                                         |
 | **Technology**    | C/C++ (FastCGI, WSGI)                      | Python (Flask), plugin-based architecture                   |
 | **First released**| 1994 (University of Minnesota, also OSGeo) | 2018 (OSGeo community project)                              |
-| **OGC standards** | WMS, WFS, WCS, OGC API – Features          | OGC API – Features, Records, Coverages, Tiles, Processes    |
+| **Standards** | WMS, WFS, WCS, OGC API – Features          | OGC API – Features, Records, Coverages, Tiles, Processes    |
 | **Config**        | Text-based Mapfile format (.map)           | YAML-based configuration                                    |
 
 ---
@@ -69,7 +69,8 @@ Features that are interesting for SWISSGEO:
 | WMS / WFS 1.x | ✅ | ❌ |
 | Map rendering / cartography | ✅ | ❌ * |
 | Tiling (WMTS / OGC Tiles) | ✅ | ✅ |
-| OpenAPI / Swagger docs | ❌ | ✅ |
+| OpenAPI docs | ✅ | ✅ |
+| Swagger UI | ❌ | ✅ |
 
 (*) Can delegate rendering to MapServer using mapscript (python bindings) or generalistic WMSFacade.
 
