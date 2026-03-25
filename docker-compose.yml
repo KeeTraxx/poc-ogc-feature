@@ -111,6 +111,26 @@ services:
       - -c
       - "pip install --quiet psycopg2-binary requests pyproj && python3 load-geojson.py"
 
+  catalogue-loader:
+    profiles:
+      - load
+    image: python:3.13-slim
+    depends_on:
+      opensearch:
+        condition: service_healthy
+    volumes:
+      - ./load-opensearch-catalogue.py:/app/load-opensearch-catalogue.py
+      - ./data:/app/data
+    working_dir: /app
+    environment:
+      OS_URL: http://opensearch:9200
+      OS_INDEX: swissgeo-catalogue
+      TINYDB_PATH: data/swissgeo-catalogue.tinydb
+    entrypoint:
+      - sh
+      - -c
+      - "pip install --quiet opensearch-py tinydb && python3 load-opensearch-catalogue.py"
+
 volumes:
   pgdata:
   osdata:

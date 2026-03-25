@@ -2,4 +2,7 @@
 meteoswiss/data
 data/meteoswiss-*
 __pycache__
+.pygeoapi-local.yml
+.venv
 pgadmin-pgpass
+aws-s3-records
